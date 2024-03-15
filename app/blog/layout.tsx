@@ -99,7 +99,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <>
+      <html>
         <section className="min-h-screen">
           {draftMode().isEnabled && <AlertBanner />}
           <main>{children}</main>
@@ -109,6 +109,6 @@ export default function RootLayout({
         </section>
         {draftMode().isEnabled && <VisualEditing />}
         <SpeedInsights />
-        </>
+      </html>
   );
 }
