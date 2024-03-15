@@ -4,13 +4,6 @@ import { cookies } from 'next/headers';
 import Button from './Button';
 
 
-export const changeLang = (lang: string) => {
-  console.log("changeLang", lang)
-  document.cookie = `NEXT_LOCALE=${lang}; path=/`;
-    // const cookieStore = cookies();
-    // cookieStore.set("NEXT_LOCALE", lang, { path: "/" });
-};
-
 function Layout() {
 
 
