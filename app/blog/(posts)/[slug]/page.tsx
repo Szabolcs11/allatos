@@ -109,6 +109,7 @@ export default async function PostPage({ params }: Props) {
           </div>
         </div>
         {post.contentHU?.length && (
+          // @ts-ignore
           <PortableText className="mx-auto max-w-2xl" value={content} />
         )}
       </article>
