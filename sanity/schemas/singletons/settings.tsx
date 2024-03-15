@@ -10,9 +10,9 @@ export default defineType({
   icon: CogIcon,
   fields: [
     defineField({
-      name: "title",
+      name: "titleHU",
       description: "This field is the title of your blog.",
-      title: "Title",
+      title: "TitleHU",
       type: "string",
       initialValue: demo.title,
       validation: (rule) => rule.required(),

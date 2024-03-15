@@ -17,6 +17,11 @@ export interface Post {
   _id: string;
   status: "draft" | "published";
   title: string;
+  titleHU?: string;
+  titleRS?: string;
+  contentHU?: PortableTextBlock[] | null;
+  contentRS?: PortableTextBlock[] | null;
+  content: PortableTextBlock[]
   slug: string;
   excerpt?: string | null;
   coverImage?: (Image & { alt?: string }) | null;
@@ -27,7 +32,9 @@ export interface Post {
 const postFields = groq`
   _id,
   "status": select(_originalId in path("drafts.**") => "draft", "published"),
-  "title": coalesce(title, "Untitled"),
+  "title": coalesce(title, "nevtelenn"),
+  titleHU,
+  titleRS,
   "slug": slug.current,
   excerpt,
   coverImage,
@@ -36,7 +43,8 @@ const postFields = groq`
 `;
 
 export const heroQuery = groq`*[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) [0] {
-  content,
+  contentHU,
+  contentRS,
   ${postFields}
 }`;
 export type HeroQueryResponse =
@@ -51,7 +59,8 @@ export const moreStoriesQuery = groq`*[_type == "post" && _id != $skip && define
 export type MoreStoriesQueryResponse = Post[] | null;
 
 export const postQuery = groq`*[_type == "post" && slug.current == $slug] [0] {
-  content,
+  contentHU,
+  contentRS,
   ${postFields}
 }`;
 export type PostQueryResponse =

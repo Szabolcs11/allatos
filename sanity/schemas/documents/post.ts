@@ -23,8 +23,14 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
-      name: "title",
-      title: "Title",
+      name: "titleHU",
+      title: "TitleHU",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "titleRS",
+      title: "TitleRS",
       type: "string",
       validation: (rule) => rule.required(),
     }),
@@ -34,15 +40,21 @@ export default defineType({
       type: "slug",
       description: "A slug is required for the post to show up in the preview",
       options: {
-        source: "title",
+        source: "titleRS",
         maxLength: 96,
         isUnique: (value, context) => context.defaultIsUnique(value, context),
       },
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "content",
-      title: "Content",
+      name: "contentHU",
+      title: "ContentHU",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
+      name: "contentRS",
+      title: "ContentRS",
       type: "array",
       of: [{ type: "block" }],
     }),
@@ -94,7 +106,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "title",
+      title: "titleHU",
       author: "author.name",
       date: "date",
       media: "coverImage",

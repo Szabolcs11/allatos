@@ -17,6 +17,7 @@ import {
   heroQuery,
   settingsQuery,
 } from "@/sanity/lib/queries";
+import { cookies } from "next/headers";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -28,15 +29,19 @@ function Intro(props: { title: string | null | undefined; description: any }) {
       <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
         {title || demo.title}
       </h1>
+        <Link href="/" className="group mb-5 block">
+          <p>Home</p>
+        </Link>
+        <Link href="/blog" className="group mb-5 block">
+          <p>Blogok</p>
+        </Link>
       <h2 className="text-pretty mt-5 text-center text-lg lg:pl-8 lg:text-left">
-        <PortableText
-          className="prose-lg"
-          value={description?.length ? description : demo.description}
-        />
       </h2>
     </section>
   );
 }
+
+
 
 function HeroPost({
   title,
@@ -51,13 +56,13 @@ function HeroPost({
 >) {
   return (
     <article>
-      <Link className="group mb-8 block md:mb-16" href={`/posts/${slug}`}>
+      <Link className="group mb-8 block md:mb-16" href={`/blog/${slug}`}>
         <CoverImage image={coverImage} priority />
       </Link>
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="text-pretty mb-4 text-4xl leading-tight lg:text-6xl">
-            <Link href={`/posts/${slug}`} className="hover:underline">
+            <Link href={`/blog/${slug}`} className="hover:underline">
               {title}
             </Link>
           </h3>
@@ -79,19 +84,22 @@ function HeroPost({
 }
 
 export default async function Page() {
+  const cookieStore = cookies();
+  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
   const [settings, heroPost] = await Promise.all([
     sanityFetch<SettingsQueryResponse>({
       query: settingsQuery,
     }),
     sanityFetch<HeroQueryResponse>({ query: heroQuery }),
   ]);
+  // console.log(heroPost)
 
   return (
     <div className="container mx-auto px-5">
       <Intro title={settings?.title} description={settings?.description} />
       {heroPost ? (
         <HeroPost
-          title={heroPost.title}
+          title={currentLang == "hu" ? heroPost.titleHU! : heroPost.titleRS!}
           slug={heroPost.slug}
           coverImage={heroPost.coverImage}
           excerpt={heroPost.excerpt}

@@ -2,7 +2,7 @@
 module.exports = {
   experimental: {
     // Used to guard against accidentally leaking SANITY_API_READ_TOKEN to the browser
-    taint: true,
+    taint: true,   
   },
   logging: {
     fetches: { fullUrl: false },

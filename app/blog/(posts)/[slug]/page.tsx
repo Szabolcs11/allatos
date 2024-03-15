@@ -19,6 +19,7 @@ import {
 } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import * as demo from "@/sanity/lib/demo";
+import { cookies } from "next/headers";
 
 type Props = {
   params: { slug: string };
@@ -36,17 +37,20 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
+    const cookieStore = cookies();
+    const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
   const post = await sanityFetch<PostQueryResponse>({
     query: postQuery,
     params,
     stega: false,
   });
+  // console.log(post);
   const previousImages = (await parent).openGraph?.images || [];
   const ogImage = resolveOpenGraphImage(post?.coverImage);
 
   return {
     authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
-    title: post?.title,
+    title: currentLang == "hu" ? post?.titleHU : post?.titleRS,
     description: post?.excerpt,
     openGraph: {
       images: ogImage ? [ogImage, ...previousImages] : previousImages,
@@ -68,7 +72,11 @@ export default async function PostPage({ params }: Props) {
   if (!post?._id) {
     return notFound();
   }
+  const cookieStore = cookies();
+  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
 
+  const title = currentLang == "hu" ? post.titleHU : post.titleRS;
+  const content = currentLang == "hu" ? post.contentHU : post.contentRS;
   return (
     <div className="container mx-auto px-5">
       <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
@@ -78,7 +86,7 @@ export default async function PostPage({ params }: Props) {
       </h2>
       <article>
         <h1 className="text-balance mb-12 text-6xl font-bold leading-tight tracking-tighter md:text-7xl md:leading-none lg:text-8xl">
-          {post.title}
+          {title}
         </h1>
         <div className="hidden md:mb-12 md:block">
           {post.author && (
@@ -100,8 +108,8 @@ export default async function PostPage({ params }: Props) {
             </div>
           </div>
         </div>
-        {post.content?.length && (
-          <PortableText className="mx-auto max-w-2xl" value={post.content} />
+        {post.contentHU?.length && (
+          <PortableText className="mx-auto max-w-2xl" value={content} />
         )}
       </article>
       <aside>

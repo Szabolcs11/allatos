@@ -14,6 +14,7 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { SettingsQueryResponse, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch<SettingsQueryResponse>({
@@ -98,18 +99,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} bg-white text-black`}>
-      <body>
+      <>
         <section className="min-h-screen">
           {draftMode().isEnabled && <AlertBanner />}
           <main>{children}</main>
           <Suspense>
-            <Footer />
+            {/* <Footer /> */}
           </Suspense>
         </section>
         {draftMode().isEnabled && <VisualEditing />}
         <SpeedInsights />
-      </body>
-    </html>
+        </>
   );
 }
