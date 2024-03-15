@@ -17,7 +17,7 @@ import {
   heroQuery,
   settingsQuery,
 } from "@/sanity/lib/queries";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -84,8 +84,9 @@ function HeroPost({
 }
 
 export default async function Page() {
-  const cookieStore = cookies();
-  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  // const cookieStore = cookies();
+  // const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  const currentLang = "hu"
   const [settings, heroPost] = await Promise.all([
     sanityFetch<SettingsQueryResponse>({
       query: settingsQuery,

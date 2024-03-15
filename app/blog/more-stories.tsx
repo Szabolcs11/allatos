@@ -9,7 +9,7 @@ import {
   MoreStoriesQueryResponse,
   moreStoriesQuery,
 } from "@/sanity/lib/queries";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 
 export default async function MoreStories(params: {
   skip: string;
@@ -19,8 +19,9 @@ export default async function MoreStories(params: {
     query: moreStoriesQuery,
     params,
   });
-  let cookieStore = cookies();
-  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  // let cookieStore = cookies();
+  // const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  const currentLang = "hu"
   // const currentLang = cookies.get("NEXT_LOCALE") || "hu"
   // console.log(cookieStore.get("NEXT_LOCALE") || "hu")
   // console.log("data")
