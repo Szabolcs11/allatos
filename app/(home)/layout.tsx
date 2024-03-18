@@ -1,35 +1,35 @@
-import React from 'react';
-import Link from 'next/link';
-// import { cookies } from 'next/headers';
+// layout.tsx
+import Link from "next/link";
+import React, { ReactNode } from "react";
+import "../globals.css";
 
+type LayoutProps = {
+  children: ReactNode;
+};
 
-function Layout() {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <html>
-    <section className="mt-16 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
-      <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">      </h1>
-        <div style={{display: "flex", gap: 32, alignItems: 'center'}}>
-          <div>Statikus főoldal</div>
-          <div>asd</div>
-          <div style={{display: 'flex', gap: 32}}>
+      <body>
+        <nav className="flex items-center gap-8 p-4 shadow-md">
+          <div className="text-lg font-bold">Statikus főoldal</div>
+          <div className="flex gap-8">
             <Link href="/">
-              <p>Home</p>
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
+                Home
+              </p>
             </Link>
-            <Link href="/blog" >
-              <p>Blogok</p>
+            <Link href="/blog">
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
+                Blogok
+              </p>
             </Link>
-            {/* <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-              <div>NYELV:</div>
-              <div style={{display: 'flex', gap: 32}}>
-              <Link href={`/hu/`} className="hover:underline">HUN</Link>
-              <Link href={`/rs/`} className="hover:underline">HUN</Link>
-              </div>
-            </div> */}
           </div>
-        </div>
-      </section>
+        </nav>
+        <div>{children}</div>
+      </body>
     </html>
   );
-}
+};
 
 export default Layout;

@@ -1,9 +1,19 @@
-import React from 'react'
+"use client";
 
-function page() {
+const Page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="p-8">
+      <h1>Welcome to Our Page</h1>
+      <p>This is a simple page using the layout component.</p>
+      <button
+        onClick={() => {
+          console.log("asd");
+        }}
+      >
+        asd
+      </button>
+    </div>
+  );
+};
 
-export default page
+export default Page;
