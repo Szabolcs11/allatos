@@ -28,12 +28,12 @@ function Intro(props: { title: string | null | undefined; description: any }) {
       {/* <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
         {title || demo.title}
       </h1> */}
-        <Link href="/" className="group mb-5 block">
+        {/* <Link href="/" className="group mb-5 block">
           <p>Home</p>
         </Link>
         <Link href="/blog" className="group mb-5 block">
           <p>Blogok</p>
-        </Link>
+        </Link> */}
       <h2 className="text-pretty mt-5 text-center text-lg lg:pl-8 lg:text-left">
       </h2>
     </section>

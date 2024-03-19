@@ -65,7 +65,6 @@ export default function RootLayout({
     <html>
       <body className="min-h-screen">
       <nav className="flex items-center gap-8 p-4 shadow-md">
-          <div className="text-lg font-bold">Blog</div>
           <div className="flex gap-8">
             <Link href="/">
               <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
