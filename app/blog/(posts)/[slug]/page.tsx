@@ -81,11 +81,11 @@ export default async function PostPage({ params }: Props) {
   const content = currentLang == "hu" ? post.contentHU : post.contentRS;
   return (
     <div className="container mx-auto px-5">
-      <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
+      {/* <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
         <Link href="/" className="hover:underline">
           {settings?.title || demo.title}
         </Link>
-      </h2>
+      </h2> */}
       <article>
         <h1 className="text-balance mb-12 text-6xl font-bold leading-tight tracking-tighter md:text-7xl md:leading-none lg:text-8xl">
           {title}

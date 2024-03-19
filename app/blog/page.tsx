@@ -25,9 +25,9 @@ function Intro(props: { title: string | null | undefined; description: any }) {
     : demo.description;
   return (
     <section className="mt-16 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
-      <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
+      {/* <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
         {title || demo.title}
-      </h1>
+      </h1> */}
         <Link href="/" className="group mb-5 block">
           <p>Home</p>
         </Link>
@@ -108,7 +108,7 @@ export default async function Page() {
       {heroPost?._id && (
         <aside>
           <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
-            More Stories
+            {currentLang == "hu" ? "További blogok" : "Više postova"}
           </h2>
           <Suspense>
             <MoreStories skip={heroPost._id} limit={100} />
