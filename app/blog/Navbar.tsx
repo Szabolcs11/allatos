@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";

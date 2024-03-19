@@ -6,7 +6,7 @@ import { SettingsQueryResponse, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { Metadata } from "next";
 import { toPlainText } from "next-sanity";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 // import React, { useState, useEffect } from "react";
 // import Cookies from "js-cookie";
 // import Link from "next/link";
