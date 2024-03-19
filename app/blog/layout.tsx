@@ -6,9 +6,10 @@ import { SettingsQueryResponse, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { Metadata } from "next";
 import { toPlainText } from "next-sanity";
+import Navbar from "./navbar";
 // import React, { useState, useEffect } from "react";
 // import Cookies from "js-cookie";
-import Link from "next/link";
+// import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch<SettingsQueryResponse>({
@@ -64,7 +65,8 @@ export default function RootLayout({
   return (
     <html>
       <body className="min-h-screen">
-      <nav className="flex items-center gap-8 p-4 shadow-md">
+        <Navbar />
+      {/* <nav className="flex items-center gap-8 p-4 shadow-md">
           <div className="flex gap-8">
             <Link href="/">
               <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
@@ -76,11 +78,11 @@ export default function RootLayout({
                 Blogok
               </p>
             </Link>
-            {/* <button onClick={handleLanguageChange}>
+            <button onClick={handleLanguageChange}>
               Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}
-            </button> */}
+            </button>
           </div>
-        </nav>
+        </nav> */}
         {children}
       </body>
     </html>
