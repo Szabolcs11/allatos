@@ -1,4 +1,3 @@
-"use client";
 import "../globals.css";
 
 import * as demo from "@/sanity/lib/demo";
@@ -7,11 +6,11 @@ import { SettingsQueryResponse, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { Metadata } from "next";
 import { toPlainText } from "next-sanity";
-import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie";
+// import React, { useState, useEffect } from "react";
+// import Cookies from "js-cookie";
 import Link from "next/link";
 
-async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch<SettingsQueryResponse>({
     query: settingsQuery,
     // Metadata should never contain stega
@@ -47,21 +46,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [locale, setLocale] = useState("hu");
+  // const [locale, setLocale] = useState("hu");
 
-  useEffect(() => {
-    const storedLocale = Cookies.get("NEXT_LOCALE");
-    if (storedLocale) {
-      setLocale(storedLocale);
-    }
-  }, []);
-  const handleLanguageChange = () => {
-    const newLocale = locale === "hu" ? "rs" : "hu";
-    setLocale(newLocale);
-    Cookies.set("NEXT_LOCALE", newLocale);
+  // useEffect(() => {
+  //   const storedLocale = Cookies.get("NEXT_LOCALE");
+  //   if (storedLocale) {
+  //     setLocale(storedLocale);
+  //   }
+  // }, []);
+  // const handleLanguageChange = () => {
+  //   const newLocale = locale === "hu" ? "rs" : "hu";
+  //   setLocale(newLocale);
+  //   Cookies.set("NEXT_LOCALE", newLocale);
 
-    console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
-  };
+  //   console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
+  // };
   return (
     <html>
       <body className="min-h-screen">
@@ -78,9 +77,9 @@ export default function RootLayout({
                 Blogok
               </p>
             </Link>
-            <button onClick={handleLanguageChange}>
+            {/* <button onClick={handleLanguageChange}>
               Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}
-            </button>
+            </button> */}
           </div>
         </nav>
         {children}
