@@ -1,13 +1,31 @@
-// layout.tsx
+"use client";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import "../globals.css";
+import Cookies from "js-cookie";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const [locale, setLocale] = useState("hu");
+
+  useEffect(() => {
+    const storedLocale = Cookies.get("NEXT_LOCALE");
+    if (storedLocale) {
+      setLocale(storedLocale);
+    }
+  }, []);
+
+  const handleLanguageChange = () => {
+    const newLocale = locale === "hu" ? "en" : "hu";
+    setLocale(newLocale);
+    Cookies.set("NEXT_LOCALE", newLocale);
+
+    console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
+  };
+
   return (
     <html>
       <body>
@@ -24,6 +42,9 @@ const Layout = ({ children }: LayoutProps) => {
                 Blogok
               </p>
             </Link>
+            <button onClick={handleLanguageChange}>
+              Nyelv: {locale === "hu" ? "Magyar" : "English"}
+            </button>
           </div>
         </nav>
         <div>{children}</div>

@@ -6,10 +6,10 @@ import CoverImage from "./cover-image";
 import DateComponent from "./date";
 import MoreStories from "./more-stories";
 import Onboarding from "./onboarding";
-import PortableText from "./portable-text";
-
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
+
+import { cookies } from "next/headers";
 import {
   HeroQueryResponse,
   Post,
@@ -17,7 +17,6 @@ import {
   heroQuery,
   settingsQuery,
 } from "@/sanity/lib/queries";
-// import { cookies } from "next/headers";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -40,8 +39,6 @@ function Intro(props: { title: string | null | undefined; description: any }) {
     </section>
   );
 }
-
-
 
 function HeroPost({
   title,
@@ -84,17 +81,15 @@ function HeroPost({
 }
 
 export default async function Page() {
-  // const cookieStore = cookies();
-  // const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
-  const currentLang = "hu"
+  const cookieStore = cookies();
+  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
   const [settings, heroPost] = await Promise.all([
     sanityFetch<SettingsQueryResponse>({
       query: settingsQuery,
     }),
     sanityFetch<HeroQueryResponse>({ query: heroQuery }),
   ]);
-  // console.log(heroPost)
-
+  
   return (
     <div className="container mx-auto px-5">
       <Intro title={settings?.title} description={settings?.description} />

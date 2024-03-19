@@ -19,7 +19,7 @@ import {
 } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import * as demo from "@/sanity/lib/demo";
-// import { cookies } from "next/headers";
+import { cookies } from "next/headers";
 
 type Props = {
   params: { slug: string };
@@ -37,9 +37,8 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-    // const cookieStore = cookies();
-    // const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
-    const currentLang = "hu"
+    const cookieStore = cookies();
+    const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
   const post = await sanityFetch<PostQueryResponse>({
     query: postQuery,
     params,
@@ -73,9 +72,10 @@ export default async function PostPage({ params }: Props) {
   if (!post?._id) {
     return notFound();
   }
-  // const cookieStore = cookies();
-  // const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
-  const currentLang = "hu"
+  const cookieStore = cookies();
+  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+
+  console.log(cookieStore.get("NEXT_LOCALE")?.value);
 
   const title = currentLang == "hu" ? post.titleHU : post.titleRS;
   const content = currentLang == "hu" ? post.contentHU : post.contentRS;
