@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   const handleLanguageChange = () => {
-    const newLocale = locale === "hu" ? "en" : "hu";
+    const newLocale = locale === "hu" ? "rs" : "hu";
     setLocale(newLocale);
     Cookies.set("NEXT_LOCALE", newLocale);
 
@@ -43,7 +43,7 @@ const Layout = ({ children }: LayoutProps) => {
               </p>
             </Link>
             <button onClick={handleLanguageChange}>
-              Nyelv: {locale === "hu" ? "Magyar" : "English"}
+              Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}
             </button>
           </div>
         </nav>
