@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import Link from "next/link";
 
-export async function generateMetadata(): Promise<Metadata> {
+async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch<SettingsQueryResponse>({
     query: settingsQuery,
     // Metadata should never contain stega
