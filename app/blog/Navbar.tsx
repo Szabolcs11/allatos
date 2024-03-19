@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import { refetchLanguage } from "./page";
 
 function Navbar() {
     const [locale, setLocale] = useState("hu");
@@ -16,7 +17,7 @@ function Navbar() {
       const newLocale = locale === "hu" ? "rs" : "hu";
       setLocale(newLocale);
       Cookies.set("NEXT_LOCALE", newLocale);
-  
+      refetchLanguage();
       console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
     };
   return (

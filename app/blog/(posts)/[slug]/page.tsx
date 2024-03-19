@@ -58,6 +58,8 @@ export async function generateMetadata(
   } satisfies Metadata;
 }
 
+export let refetchLanguage: () => void;
+
 export default async function PostPage({ params }: Props) {
   const [post, settings] = await Promise.all([
     sanityFetch<PostQueryResponse>({
@@ -72,10 +74,15 @@ export default async function PostPage({ params }: Props) {
   if (!post?._id) {
     return notFound();
   }
-  const cookieStore = cookies();
-  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
 
-  console.log(cookieStore.get("NEXT_LOCALE")?.value);
+
+  const cookieStore = cookies();
+  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+
+  refetchLanguage = async () => {
+    currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+    console.log("aasd");
+  }
 
   const title = currentLang == "hu" ? post.titleHU : post.titleRS;
   const content = currentLang == "hu" ? post.contentHU : post.contentRS;

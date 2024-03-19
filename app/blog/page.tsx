@@ -80,15 +80,21 @@ function HeroPost({
   );
 }
 
+export let refetchLanguage: () => void;
+
 export default async function Page() {
   const cookieStore = cookies();
-  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
   const [settings, heroPost] = await Promise.all([
     sanityFetch<SettingsQueryResponse>({
       query: settingsQuery,
     }),
     sanityFetch<HeroQueryResponse>({ query: heroQuery }),
   ]);
+
+  refetchLanguage = async () => {
+    currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu"
+  }
   
   return (
     <div className="container mx-auto px-5">
