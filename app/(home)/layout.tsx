@@ -33,18 +33,15 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="text-lg font-bold">Statikus főoldal</div>
           <div className="flex gap-8">
             <Link href="/">
-              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
-                Home
-              </p>
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Home</p>
+            </Link>
+            <Link href="/about">
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Blogok</p>
             </Link>
             <Link href="/blog">
-              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
-                Blogok
-              </p>
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Blogok</p>
             </Link>
-            <button onClick={handleLanguageChange}>
-              Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}
-            </button>
+            <button onClick={handleLanguageChange}>Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}</button>
           </div>
         </nav>
         <div>{children}</div>
