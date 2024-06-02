@@ -36,7 +36,7 @@ const Layout = ({ children }: LayoutProps) => {
               <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Home</p>
             </Link>
             <Link href="/about">
-              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Blogok</p>
+              <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Rólunk</p>
             </Link>
             <Link href="/blog">
               <p className="text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">Blogok</p>
