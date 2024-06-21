@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { ReactNode, useState, useEffect } from "react";
 import "../globals.css";
 import Cookies from "js-cookie";
+import Navbar from "../blog/Navbar";
+import Footer from "../blog/Footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -28,8 +30,13 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <html>
-      <body>
-        <nav className="flex items-center gap-8 p-4 shadow-md">
+      <body className="landing is-preload">
+        <div id="page-wrapper">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
+        {/* <nav className="flex items-center gap-8 p-4 shadow-md">
           <div className="text-lg font-bold">Statikus főoldal</div>
           <div className="flex gap-8">
             <Link href="/">
@@ -46,8 +53,8 @@ const Layout = ({ children }: LayoutProps) => {
             </Link>
             <button onClick={handleLanguageChange}>Nyelv: {locale === "hu" ? "Magyar" : "Szerb"}</button>
           </div>
-        </nav>
-        <div>{children}</div>
+        </nav> */}
+        {/* <div>{children}</div> */}
       </body>
     </html>
   );
