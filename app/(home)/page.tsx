@@ -20,9 +20,7 @@ const Page = () => {
               adipiscing nunc adipiscing. Condimentum turpis massa.
             </p>
           </header>
-          <span className="image featured">
-            <img src="images/pic01.jpg" alt="" />
-          </span>
+          <span className="image featured">{/* <img src="images/pic01.jpg" alt="" /> */}</span>
         </section>
 
         <section className="box special features">
@@ -67,9 +65,7 @@ const Page = () => {
         <div className="row">
           <div className="col-6 col-12-narrower">
             <section className="box special">
-              <span className="image featured">
-                <img src="images/pic02.jpg" alt="" />
-              </span>
+              <span className="image featured">{/* <img src="images/pic02.jpg" alt="" /> */}</span>
               <h3>Sed lorem adipiscing</h3>
               <p>
                 Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
@@ -86,9 +82,7 @@ const Page = () => {
           </div>
           <div className="col-6 col-12-narrower">
             <section className="box special">
-              <span className="image featured">
-                <img src="images/pic03.jpg" alt="" />
-              </span>
+              <span className="image featured">{/* <img src="images/pic03.jpg" alt="" /> */}</span>
               <h3>Accumsan integer</h3>
               <p>
                 Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
