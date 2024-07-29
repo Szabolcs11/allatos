@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Imgcomponent from "./imgcomponent";
 
@@ -6,23 +7,24 @@ const Sources = ["Kutyus1.jpeg", "kutyus.jpeg", "Lóbox.JPG", "Artur.jpeg"];
 const Animals = [
   {
     name: "Kutyus1",
-    src: "Kutyus1.jpeg",
+    src: "./../Kutyus1.jpeg",
   },
   {
     name: "Kutyus",
-    src: "kutyus.jpeg",
+    src: "./../kutyus.jpeg",
   },
   {
     name: "Lóbox",
-    src: "Lóbox.JPG",
+    src: "./../Lóbox.JPG",
   },
   {
     name: "Artur",
-    src: "Artur.jpeg",
+    src: "./../Artur.jpeg",
   },
 ];
 
-function page() {
+function page(props: any) {
+  console.log(props);
   const [fulSizedImgSrc, setFullSizedImgSrc] = useState<string | null>(null);
   useEffect(() => {
     if (fulSizedImgSrc) {
@@ -34,9 +36,6 @@ function page() {
   }, [fulSizedImgSrc]);
   return (
     <>
-      <section id="banner">
-        <h2>Képgaléria</h2>
-      </section>
       {fulSizedImgSrc ? (
         <div
           style={{

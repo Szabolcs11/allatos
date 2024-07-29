@@ -13,5 +13,36 @@
         "content2": "Naši terenski veterinari obavljaju svoj posao na visokom profesionalnom nivou u nezi domaćih životinja. Pružamo preventivne i kompletne medicinske usluge celokupnom fondu, pratimo cikluse plodnosti.",
         "content3": "U našoj maloprodaji možete pronaći hranu za male i farme, stočnu hranu, lekove i drugu opremu.",
         "content4": "Ponosni smo što brzo i efikasno dijagnostikujemo stanje životinje radeći sve na licu mesta."
+    },
+    "Services": {
+        "welcome": "Naše usluge",
+        "title": "Koje usluge nudimo?",
+        "subtitle1": "RS Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare",
+        "subtitle2": "adipiscing nunc adipiscing. Condimentum turpis massa."
+    },
+    "SpecialServices": {
+        "welcome": "Specijalne Usluge",
+        "subwelcome": "Ponosni smo što možemo pomoći pacijentima da se izleče pomoću alternativnih rešenja!",
+        "subtitle1": "Teško izlečive slučajeve uspešno smo rešavali homeopatskim metodama u proteklih dvadeset godina.",
+        "subtitle2": "U oblasti lečenja konja možemo obezbediti odgovarajuće bokseve za kontinuirano i precizno lečenje ili veštačku oplodnju. Naši veterinari, specijalisti za reproduktivnu biologiju i lečenje konja, pružaju evropski standard usluga našim pacijentima. Veštačku oplodnju vršimo za konje sa specijalnim krvnim linijama."
+    },
+    "Gallery": {
+        "welcome": "Galerija slika"
+    },
+    "Contact": {
+        "welcome": "Kontakt",
+        "telephone": "Telefon:",
+        "phoneoncall": "Dežurni telefon:",
+        "tribenumber": "Matični broj:",
+        "vatnumber": "Poreski br.:",
+        "openinghours": "Radno vreme:",
+        "monday": "Ponedeljak:",
+        "tuesday": "Utorak:",
+        "wednesday": "Sreda:",
+        "thursday": "Četvrtak:",
+        "friday": "Petak:",
+        "saturday": "Subota:",
+        "sunday": "Nedelja:",
+        "closed": "Zatvoreno"
     }
 }

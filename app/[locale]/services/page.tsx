@@ -1,20 +1,22 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function page() {
+  const t = useTranslations("Services");
   return (
     <>
       <section id="banner">
-        <h2>Szolgáltatásaink</h2>
+        <h2>{t("welcome")}</h2>
       </section>
 
       <section id="main" className="container">
         <section className="box special">
           <header className="major">
-            <h2>Milyen szolgáltatásokat nyujtunk?</h2>
+            <h2>{t("title")}</h2>
             <p>
-              Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare
+              {t("subtitle1")}
               <br />
-              adipiscing nunc adipiscing. Condimentum turpis massa.
+              {t("subtitle2")}
             </p>
           </header>
         </section>

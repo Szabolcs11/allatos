@@ -1,25 +1,30 @@
-"use client";
+import { useTranslations } from "next-intl";
 
 function page() {
+  const t = useTranslations("Contact");
   return (
     <section id="main" className="container">
       <header>
-        <h2>Kontakt</h2>
-        <p>Tell us what you think about our little operation.</p>
+        <h2>{t("welcome")}</h2>
+        {/* <p>Tell us what you think about our little operation.</p> */}
       </header>
       <div className="box">
         <section className="openat">
-          <h1>Nyitvatartás:</h1>
-          <p>Hétfő: 7:00 - 15:00</p>
-          <p>Kedd: 7:00 - 15:00</p>
-          <p>Szerda: 7:00 - 15:00</p>
-          <p>Csütörtök: 7:00 - 15:00</p>
-          <p>Péntek: 7:00 - 15:00</p>
-          <p>Szombat: 7:00 - 12:00</p>
-          <p>Vasárnap: Zárva</p>
+          <h1>{t("openinghours")}:</h1>
+          <p>{t("monday")} 7:00 - 15:00</p>
+          <p>{t("tuesday")} 7:00 - 15:00</p>
+          <p>{t("wednesday")} 7:00 - 15:00</p>
+          <p>{t("thursday")} 7:00 - 15:00</p>
+          <p>{t("friday")} 7:00 - 15:00</p>
+          <p>{t("saturday")} 7:00 - 12:00</p>
+          <p>
+            {t("sunday")} {t("closed")}
+          </p>
         </section>
         <section className="contact-info">
-          Ügyeletes telefonszám: <a href="tel:0647150100">063 7 150 100</a>
+          {t("telephone")} <a href="tel:024764270">024 764270</a>
+          <br />
+          {t("phoneoncall")} <a href="tel:0647150100">063 7 150 100</a>
           <br />
           Instagram:
           <a href="https://www.instagram.com/veterinarskastanica.vetservis/">
@@ -39,6 +44,10 @@ function page() {
             loading="lazy"
           ></iframe>
         </section>
+        <br />
+        <span>{t("tribenumber")} 08796165</span>
+        <br />
+        <span>{t("vatnumber")} 103078698</span>
       </div>
     </section>
   );

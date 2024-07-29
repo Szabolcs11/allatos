@@ -32,7 +32,7 @@ function Navbar({ isFilldBg }: NavbarType) {
       }
     }
   };
-  console.log(pathname);
+
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
       <h1>

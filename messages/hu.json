@@ -13,5 +13,36 @@
         "content2": "Terepi állatorvosaink magas szakmai színvonalon végzik munkájukat a haszonállatok ellátásában. Preventív és teljes körű gyógyászati szolgáltatást nyújtunk a teljes állománynak, kísérjük a termékenységi ciklusokat.",
         "content3": "Kiskereskedelmi üzletünkben megtalálhatók a kis- és haszonállat eledelek, tápok, gyógyszerek és egyéb felszerelések.",
         "content4": "Büszkék vagyunk arra, hogy gyorsan és hatékonyan mindent helyben elvégzése pontosan diagnosztizáljuk az állat állapotát."
+    },
+    "Services": {
+        "welcome": "Szolgáltatásaink",
+        "title": "Milyen szolgáltatásokat nyujtunk?",
+        "subtitle1": "HU Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare",
+        "subtitle2": "adipiscing nunc adipiscing. Condimentum turpis massa."
+    },
+    "SpecialServices": {
+        "welcome": "Speciális Szolgáltatásaink",
+        "subwelcome": "Büszkék vagyunk hogy alternatív megoldásokkal segíthetjük pácienseink gyógyulását!",
+        "subtitle1": "Nehezen gyógyuló eseteket homeopátiás módszerrel hatékonyan oldottuk meg az elmúlt húsz év során.",
+        "subtitle2": "A lógyógyászat terén megfelelő box-ban történő elhelyezést tudunk biztosítani a folyamatos és pontos gyógyítás vagy megtermékenyítés érdekében. Szaporodás biológus és lógyógyász specialista állatorvosaink Európai szinvonalú ellátást biztosítanak pácienseinknek. Speciális vérvonalú lovaknak mesterséges megtermékenyítést végzünk."
+    },
+    "Gallery": {
+        "welcome": "Galéria"
+    },
+    "Contact": {
+        "welcome": "Kapcsolat",
+        "telephone": "Telefon:",
+        "phoneoncall": "Ügyeletes telefonszám:",
+        "tribenumber": "Törzsszám:",
+        "vatnumber": "Adószám:",
+        "openinghours": "Nyitvatartás:",
+        "monday": "Hétfő:",
+        "tuesday": "Kedd:",
+        "wednesday": "Szerda:",
+        "thursday": "Csütörtök:",
+        "friday": "Péntek:",
+        "saturday": "Szombat:",
+        "sunday": "Vasárnap:",
+        "closed": "Zárva"
     }
 }
