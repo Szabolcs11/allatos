@@ -1,10 +1,10 @@
 "use client";
+import "./../../globals.css";
 import Link from "next/link";
 import React, { ReactNode, useState, useEffect } from "react";
-import "../globals.css";
 import Cookies from "js-cookie";
-import Navbar from "../blog/Navbar";
-import Footer from "../blog/Footer";
+import Navbar from "../../blog/Navbar";
+import Footer from "../../blog/Footer";
 
 type LayoutProps = {
   children: ReactNode;

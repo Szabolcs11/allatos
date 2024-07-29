@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+const withNextIntl = require("next-intl/plugin")();
 
-module.exports = {
+module.exports = withNextIntl({
   experimental: {
     taint: true,
   },
@@ -24,4 +25,4 @@ module.exports = {
 
     return config;
   },
-};
+});

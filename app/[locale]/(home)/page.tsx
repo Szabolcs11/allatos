@@ -1,27 +1,29 @@
-import banner from "./../images/banner.jpg";
-import pic2 from "./../images/pic02.jpg";
-import pic3 from "./../images/pic03.jpg";
+import banner from "./../../images/banner.jpg";
+import pic2 from "./../../images/pic02.jpg";
+import pic3 from "./../../images/pic03.jpg";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
+  const t = useTranslations("Index");
   return (
     <>
       <section id="banner">
         <h2>Vetservis</h2>
-        <p>Mert az élet érték!</p>
+        <p>{t("welcome")}</p>
       </section>
 
       <section id="main" className="container">
         <section className="box special">
           <header className="major">
             <h2>
-              Introducing the ultimate mobile app
+              {t("title1")}
               <br />
-              for doing stuff with your phone
+              {t("title2")}
             </h2>
             <p>
-              Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare
+              {t("subtitle1")}
               <br />
-              adipiscing nunc adipiscing. Condimentum turpis massa.
+              {t("subtitle2")}
             </p>
           </header>
           <span className="image featured">

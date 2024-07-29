@@ -1,4 +1,5 @@
 "use client";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
@@ -8,24 +9,30 @@ type NavbarType = {
 };
 
 function Navbar({ isFilldBg }: NavbarType) {
-  const [locale, setLocale] = useState("hu");
+  const [locale, setLocale] = useState("res");
   const [showDropdown, setShowDropdown] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    const storedLocale = Cookies.get("NEXT_LOCALE");
+    const storedLocale = Cookies.get("NEXT_LOCALE") || "rs";
     if (storedLocale) {
       setLocale(storedLocale);
     }
   }, []);
+
   const handleLanguageChange = (lang: string) => {
-    // const newLocale = locale === "hu" ? "rs" : "hu";
-    if (lang == "hu" || lang == "rs") {
-      setLocale(lang);
+    if (lang === "hu" || lang === "rs") {
       Cookies.set("NEXT_LOCALE", lang);
-      window.location.reload();
-      console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
+      const path = pathname.split("/")[2];
+      if (path) {
+        router.push("/" + lang + "/" + path, {});
+      } else {
+        router.push("/" + lang, {});
+      }
     }
   };
+  console.log(pathname);
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
       <h1>
@@ -34,31 +41,30 @@ function Navbar({ isFilldBg }: NavbarType) {
       <nav id="nav">
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href={"/" + locale}>Home</Link>
           </li>
           <li>
-            <Link href="/about">Rólunk</Link>
+            <Link href={"/" + locale + "/about"}>Rólunk</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href={"/" + locale + "/blog"}>Blog</Link>
           </li>
           <li>
-            <Link href="/services">Szolgáltatásaink</Link>
+            <Link href={"/" + locale + "/services"}>Szolgáltatásaink</Link>
           </li>
           <li>
-            <Link href="/specialservices">Speciális Szolgáltatásaink</Link>
+            <Link href={"/" + locale + "/specialservices"}>Speciális Szolgáltatásaink</Link>
           </li>
           <li>
-            <Link href="/gallery">Képgaléria</Link>
+            <Link href={"/" + locale + "/gallery"}>Képgaléria</Link>
           </li>
           <li>
-            <Link href="/contact">Kontakt</Link>
+            <Link href={"/" + locale + "/contact"}>Kontakt</Link>
           </li>
           <li>
             <a
               onMouseEnter={() => setShowDropdown(true)}
               onMouseLeave={() => setShowDropdown(false)}
-              href="#"
               className="icon solid fa-angle-down button dropdown"
             >
               Nyelv
