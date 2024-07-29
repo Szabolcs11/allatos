@@ -3,8 +3,13 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
-function Navbar() {
+type NavbarType = {
+  isFilldBg?: boolean;
+};
+
+function Navbar({ isFilldBg }: NavbarType) {
   const [locale, setLocale] = useState("hu");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const storedLocale = Cookies.get("NEXT_LOCALE");
@@ -22,59 +27,50 @@ function Navbar() {
     }
   };
   return (
-    <header id="header" className="alt">
+    <header id="header" className={isFilldBg ? "" : "alt"}>
       <h1>
         <a href="index.html">Vetservis</a>
       </h1>
       <nav id="nav">
         <ul>
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">
-              <a>Rólunk</a>
-            </Link>
+            <Link href="/about">Rólunk</Link>
           </li>
           <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li>
-            <Link href="/services">
-              <a>Szolgáltatásaink</a>
-            </Link>
+            <Link href="/services">Szolgáltatásaink</Link>
           </li>
           <li>
-            <Link href="/specialservices">
-              <a>Speciális Szolgáltatásaink</a>
-            </Link>
+            <Link href="/specialservices">Speciális Szolgáltatásaink</Link>
           </li>
           <li>
-            <Link href="/gallery">
-              <a>Képgaléria</a>
-            </Link>
+            <Link href="/gallery">Képgaléria</Link>
           </li>
           <li>
-            <Link href="/contact">
-              <a href="contact.html">Kontakt</a>
-            </Link>
+            <Link href="/contact">Kontakt</Link>
           </li>
           <li>
-            <a href="#" className="icon solid fa-angle-down button">
+            <a
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+              href="#"
+              className="icon solid fa-angle-down button dropdown"
+            >
               Nyelv
+              {showDropdown ? (
+                <div className="dropdown-content">
+                  <li onClick={() => handleLanguageChange("hu")}>Magyar</li>
+                  <li onClick={() => handleLanguageChange("rs")}>Szerb</li>
+                </div>
+              ) : (
+                <></>
+              )}
             </a>
-            <ul>
-              <li>
-                <a onClick={() => handleLanguageChange("rs")}>Szerb</a>
-              </li>
-              <li>
-                <a onClick={() => handleLanguageChange("hu")}>Magyar</a>
-              </li>
-            </ul>
           </li>
         </ul>
       </nav>
