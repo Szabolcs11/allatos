@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-function page() {
+function Page() {
   const t = useTranslations("Contact");
   return (
     <section id="main" className="container">
@@ -53,4 +53,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

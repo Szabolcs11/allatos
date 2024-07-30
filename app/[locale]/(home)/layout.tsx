@@ -1,38 +1,30 @@
-"use client";
+import { useTranslations } from "next-intl";
+import { ReactNode } from "react";
+import Footer from "../blog/Footer";
+import Navbar from "../blog/Navbar";
 import "./../../globals.css";
-import Link from "next/link";
-import React, { ReactNode, useState, useEffect } from "react";
-import Cookies from "js-cookie";
-import Navbar from "../../blog/Navbar";
-import Footer from "../../blog/Footer";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  const [locale, setLocale] = useState("hu");
-
-  useEffect(() => {
-    const storedLocale = Cookies.get("NEXT_LOCALE");
-    if (storedLocale) {
-      setLocale(storedLocale);
-    }
-  }, []);
-
-  const handleLanguageChange = () => {
-    const newLocale = locale === "hu" ? "rs" : "hu";
-    setLocale(newLocale);
-    Cookies.set("NEXT_LOCALE", newLocale);
-
-    console.log("Language changed to", Cookies.get("NEXT_LOCALE"));
-  };
+  const t = useTranslations("Menu");
+  const menus = [
+    { title: t("home") },
+    { title: t("about") },
+    { title: t("blog") },
+    { title: t("services") },
+    { title: t("specialservices") },
+    { title: t("gallery") },
+    { title: t("contact") },
+  ];
 
   return (
     <html>
       <body className="landing is-preload">
         <div id="page-wrapper">
-          <Navbar />
+          <Navbar menus={menus} />
           {children}
           <Footer />
         </div>

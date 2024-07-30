@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-function page() {
+function Page() {
   const t = useTranslations("SpecialServices");
   return (
     <>
@@ -25,4 +25,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

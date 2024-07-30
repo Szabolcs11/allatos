@@ -3,13 +3,15 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import { useTranslations } from "next-intl";
 
 type NavbarType = {
   isFilldBg?: boolean;
+  menus: any;
 };
 
-function Navbar({ isFilldBg }: NavbarType) {
-  const [locale, setLocale] = useState("res");
+function Navbar({ isFilldBg, menus }: NavbarType) {
+  const [locale, setLocale] = useState("rs");
   const [showDropdown, setShowDropdown] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -36,30 +38,30 @@ function Navbar({ isFilldBg }: NavbarType) {
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
       <h1>
-        <a href="index.html">Vetservis</a>
+        <a>Vetservis</a>
       </h1>
       <nav id="nav">
         <ul>
           <li>
-            <Link href={"/" + locale}>Home</Link>
+            <Link href={"/" + locale}>{menus[0].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/about"}>Rólunk</Link>
+            <Link href={"/" + locale + "/about"}>{menus[1].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/blog"}>Blog</Link>
+            <Link href={"/" + locale + "/blog"}>{menus[2].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/services"}>Szolgáltatásaink</Link>
+            <Link href={"/" + locale + "/services"}>{menus[3].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/specialservices"}>Speciális Szolgáltatásaink</Link>
+            <Link href={"/" + locale + "/specialservices"}>{menus[4].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/gallery"}>Képgaléria</Link>
+            <Link href={"/" + locale + "/gallery"}>{menus[5].title}</Link>
           </li>
           <li>
-            <Link href={"/" + locale + "/contact"}>Kontakt</Link>
+            <Link href={"/" + locale + "/contact"}>{menus[6].title}</Link>
           </li>
           <li>
             <a

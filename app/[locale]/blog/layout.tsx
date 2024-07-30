@@ -1,4 +1,4 @@
-import "../globals.css";
+import "./../../globals.css";
 
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
@@ -9,6 +9,7 @@ import { toPlainText } from "next-sanity";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 // import React, { useState, useEffect } from "react";
 // import Cookies from "js-cookie";
@@ -46,14 +47,22 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   if (typeof window !== "undefined") {
     const hostname = window.location.hostname;
-    console.log(hostname);
   }
-  console.log("RootLayout");
+  const t = useTranslations("Menu");
+  const menus = [
+    { title: t("home") },
+    { title: t("about") },
+    { title: t("blog") },
+    { title: t("services") },
+    { title: t("specialservices") },
+    { title: t("gallery") },
+    { title: t("contact") },
+  ];
   return (
     <html>
       <body className="landing is-preload">
         <div id="page-wrapper">
-          <Navbar isFilldBg={true} />
+          <Navbar menus={menus} isFilldBg={true} />
           {children}
           <Footer />
         </div>

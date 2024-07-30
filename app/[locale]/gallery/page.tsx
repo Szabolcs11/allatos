@@ -23,8 +23,7 @@ const Animals = [
   },
 ];
 
-function page(props: any) {
-  console.log(props);
+function Page(props: any) {
   const [fulSizedImgSrc, setFullSizedImgSrc] = useState<string | null>(null);
   useEffect(() => {
     if (fulSizedImgSrc) {
@@ -82,4 +81,4 @@ function page(props: any) {
   );
 }
 
-export default page;
+export default Page;

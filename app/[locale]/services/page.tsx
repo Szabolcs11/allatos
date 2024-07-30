@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-function page() {
+function Page() {
   const t = useTranslations("Services");
   return (
     <>
@@ -24,75 +24,65 @@ function page() {
         <section className="box special features">
           <div className="features-row" style={{ borderTop: "none" }}>
             <section>
-              <h3>KISÁLLAT RENDELŐ</h3>
-              <p>
-                Kisállatokat napi szinten várjuk szeretettel rendelőnkben védőoltások és egyéb ambuláns kezelések
-                céljából.
-              </p>
+              <h3>{t("section1title")}</h3>
+              <p>{t("section1subtitle")}</p>
               <ul>
                 <li>
-                  Kisállatok állapotfelmérése és kezelése - igény szerint <b>alternatív homeopátiás módszerekkel</b>
+                  {t("service1item1")}
+                  <b>{t("service1item12")}</b>
                 </li>
-                <li>Infúziós terápiák az állatorvos javaslata szerint</li>
-                <li>Fogászati ellátás, ultrahangos fogkőleszedés</li>
-                <li>Laboratóriumi diagnosztika - teljes vérkép diagnosztika, biokémia, gyorstesztek</li>
-                <li>Mintaküldés a megfelelő állatorvosi laboratóriumba szükség esetén</li>
-                <li>Termékeny napok meghatározása, mesterséges megtermékenyítés</li>
-                <li>Ultrahang diagnosztika</li>
-                <li>Röntgen diagnosztika</li>
-                <li>Bőrgyógyászati vizsgálatok és kezelések</li>
-                <li>Fülgyógyászati vizsgálatok</li>
-                <li>Allergia kezelése</li>
+                <li>{t("service1item2")}</li>
+                <li>{t("service1item3")}</li>
+                <li>{t("service1item4")}</li>
+                <li>{t("service1item5")}</li>
+                <li>{t("service1item6")}</li>
+                <li>{t("service1item7")}</li>
+                <li>{t("service1item8")}</li>
+                <li>{t("service1item9")}</li>
+                <li>{t("service1item10")}</li>
+                <li>{t("service1item11")}</li>
               </ul>
-              Árjegyzékünkért kérjük, kattintson
+              {t("sectionpricelist")}
               <a href="./Male Životinje Ambulanta Cenovnik.docx.pdf" target="_blank">
-                ide
+                {t("sectionpricelistlink")}
               </a>
               .
             </section>
             <section>
-              <h3>SEBÉSZET</h3>
-              <p>
-                Műtéteket előjegyzéssel rutinszerűen, altatásban végezzük. A műtét során a szívműködést és vérnyomást
-                figyelemmel kísérjük. Sürgős esetben azonnal elvégezzük a szükséges operációt.
-              </p>
+              <h3>{t("section2title")}</h3>
+              <p>{t("section2subtitle")}</p>
               <ul>
-                <li>Sterilizáció és kasztráció</li>
-                <li>Császármetszés, szülés, ellés levezetése</li>
-                <li>Tumorműtétek</li>
-                <li>Szemészeti műtétek</li>
-                <li>Sérvek operációja</li>
-                <li>Piometra</li>
-                <li>Székrekedés kezelése</li>
-                <li>Méhelőesés és egyéb nőgyógyászati problémák kezelése</li>
+                <li>{t("service2item1")}</li>
+                <li>{t("service2item2")}</li>
+                <li>{t("service2item3")}</li>
+                <li>{t("service2item4")}</li>
+                <li>{t("service2item5")}</li>
+                <li>{t("service2item6")}</li>
+                <li>{t("service2item7")}</li>
+                <li>{t("service2item8")}</li>
               </ul>
-              Árjegyzékünkért kérjük, kattintson{" "}
+              {t("sectionpricelist")}
               <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank">
-                ide
+                {t("sectionpricelistlink")}
               </a>
               .
             </section>
           </div>
           <div className="features-row" style={{ borderTop: "none" }}>
             <section>
-              <h3>TEREPI MUNKA</h3>
-              <p>
-                Haszonállatok kezelése és az állomány követése akár napi szinten. Ügyfeleink igénye szerint házhoz megy
-                állatorvosunk.
-              </p>
+              <h3>{t("section3title")}</h3>
+              <p>{t("section3subtitle")}</p>
               <ul>
-                <li>Megelőző oltások</li>
-                <li>Akut esetek ellátása</li>
-                <li>Krónikus betegségek kezelése</li>
-                <li>
-                  Szaporodásbiológia - mely magában foglalja a szarvasmarha ciklusának követését egészen a hasasságig
-                </li>
-                <li>Elletés</li>
-                <li>Terepi ultrahang diagnosztika</li>
+                <li>{t("service3item1")}</li>
+                <li>{t("service3item2")}</li>
+                <li>{t("service3item3")}</li>
+                <li>{t("service3item4")}</li>
+                <li>{t("service3item5")}</li>
+                <li>{t("service3item6")}</li>
               </ul>
-              Árjegyzékünkért kérjük, kattintson
+              {t("sectionpricelist")}
               <a href="./Terenski rad Cenovnik.docx.pdf" target="_blank">
-                ide
+                {t("sectionpricelistlink")}
               </a>
               .
             </section>
@@ -103,4 +93,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
