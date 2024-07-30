@@ -18,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
     { title: t("specialservices") },
     { title: t("gallery") },
     { title: t("contact") },
+    { title: t("language") },
   ];
 
   return (

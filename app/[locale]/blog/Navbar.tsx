@@ -69,7 +69,7 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
               onMouseLeave={() => setShowDropdown(false)}
               className="icon solid fa-angle-down button dropdown"
             >
-              Nyelv
+              {menus[7].title}
               {showDropdown ? (
                 <div className="dropdown-content">
                   <li onClick={() => handleLanguageChange("hu")}>Magyar</li>

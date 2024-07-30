@@ -14,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { title: t("specialservices") },
     { title: t("gallery") },
     { title: t("contact") },
+    { title: t("language") },
   ];
   return (
     <html>
