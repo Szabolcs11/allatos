@@ -2,29 +2,33 @@
 
 import React, { useEffect, useState } from "react";
 import Imgcomponent from "./imgcomponent";
+import CloseIcon from "./CloseIcon";
+import ArrowLeftIcon from "./ArrowLeftIcon";
+import ArrowRightIcon from "./ArrowRightIcon";
 
 const Sources = ["Kutyus1.jpeg", "kutyus.jpeg", "Lóbox.JPG", "Artur.jpeg"];
 const Animals = [
   {
     name: "Kutyus1",
-    src: "./../Kutyus1.jpeg",
+    src: "./../images/Kutyus1.jpeg",
   },
   {
     name: "Kutyus",
-    src: "./../kutyus.jpeg",
+    src: "./../images/kutyus.jpeg",
   },
   {
     name: "Lóbox",
-    src: "./../Lóbox.JPG",
+    src: "./../images/Lóbox.JPG",
   },
   {
     name: "Artur",
-    src: "./../Artur.jpeg",
+    src: "./../images/Artur.jpeg",
   },
 ];
 
 function Page(props: any) {
   const [fulSizedImgSrc, setFullSizedImgSrc] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   useEffect(() => {
     if (fulSizedImgSrc) {
       window.scrollTo(0, 0);
@@ -33,6 +37,23 @@ function Page(props: any) {
       document.body.style.overflow = "auto";
     }
   }, [fulSizedImgSrc]);
+
+  function handleNextImage() {
+    if (currentImageIndex < Animals.length - 1) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    } else {
+      setCurrentImageIndex(0);
+    }
+  }
+
+  function handlePrevImage() {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    } else {
+      setCurrentImageIndex(Animals.length - 1);
+    }
+  }
+
   return (
     <>
       {fulSizedImgSrc ? (
@@ -51,15 +72,33 @@ function Page(props: any) {
           }}
         >
           <div>
-            <button
-              style={{ position: "absolute", top: 20, right: 20, padding: "0.3em", cursor: "pointer" }}
+            <div
+              style={{
+                position: "absolute",
+                top: 20,
+                right: 20,
+                padding: "0.3em",
+                cursor: "pointer",
+              }}
               onClick={() => setFullSizedImgSrc(null)}
             >
-              X
-            </button>
+              <CloseIcon />
+            </div>
+            <div
+              style={{ position: "absolute", top: "50%", left: 30, cursor: "pointer", color: "white" }}
+              onClick={() => handlePrevImage()}
+            >
+              <ArrowLeftIcon />
+            </div>
+            <div
+              style={{ position: "absolute", top: "50%", right: 30, cursor: "pointer", color: "white" }}
+              onClick={() => handleNextImage()}
+            >
+              <ArrowRightIcon />
+            </div>
           </div>
           <section style={{ width: "35%" }}>
-            <img src={fulSizedImgSrc} style={{ width: "100%", height: "100%" }} alt="" />
+            <img src={Animals[currentImageIndex].src} style={{ width: "100%", height: "100%" }} alt="" />
           </section>
         </div>
       ) : (

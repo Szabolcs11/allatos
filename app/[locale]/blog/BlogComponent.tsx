@@ -10,9 +10,10 @@ type BlogComponentProps = {
   date: string;
   author: Author | null | undefined;
   excerpt: string | null | undefined;
+  readmore: string;
 };
 
-function BlogComponent({ converImage, title, slug, excerpt }: BlogComponentProps) {
+function BlogComponent({ converImage, title, slug, excerpt, readmore }: BlogComponentProps) {
   // const { image: source, priority } = props;
   // const image = source?.asset?._ref ? (
   //   <Image
@@ -42,9 +43,7 @@ function BlogComponent({ converImage, title, slug, excerpt }: BlogComponentProps
         <p>{excerpt}</p>
         <ul className="actions special">
           <li>
-            <a href={"./blog/" + slug} className="button alt">
-              Elolvasom
-            </a>
+            <a href={"./blog/" + slug} className="button alt">{readmore}</a>
           </li>
         </ul>
       </section>

@@ -19,6 +19,18 @@ function Page() {
             <p>{t("content3")}</p>
             <h2></h2>
             <p>{t("content4")}</p>
+            <h2></h2>
+            <p>{t("content5")}</p>
+            <h2></h2>
+            <p>{t("content6")}</p>
+            <h2></h2>
+            <p>{t("content7")}</p>
+            <h2></h2>
+            <p>{t("content8")}</p>
+            <h2></h2>
+            <p>{t("content9")}</p>
+            <h2></h2>
+            <p className="bold">{t("content10")}</p>
           </header>
         </section>
       </section>

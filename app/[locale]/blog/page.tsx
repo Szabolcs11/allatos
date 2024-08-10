@@ -21,6 +21,7 @@ import {
 } from "@/sanity/lib/queries";
 import { useEditState } from "sanity";
 import BlogComponent from "./BlogComponent";
+import { useTranslations } from "next-intl";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -106,6 +107,7 @@ export default async function Page() {
                 excerpt={e.excerpt}
                 slug={e.slug}
                 title={currentLang == "hu" ? e.titleHU : e.titleRS}
+                readmore={currentLang == "hu" ? "Olvass tovább" : "Pročitaj više"}
               />
             );
           })}

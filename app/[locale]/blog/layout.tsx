@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 
+
 // import React, { useState, useEffect } from "react";
 // import Cookies from "js-cookie";
 // import Link from "next/link";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     const hostname = window.location.hostname;
   }
   const t = useTranslations("Menu");
+  const te = useTranslations("Blog");
   const menus = [
     { title: t("home") },
     { title: t("about") },
