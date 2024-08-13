@@ -77,7 +77,7 @@ function HeroPost({
 
 export default async function Page() {
   const cookieStore = cookies();
-  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu";
+  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "rs";
   // const [settings, heroPost] = await Promise.all([
   //   sanityFetch<SettingsQueryResponse>({
   //     query: settingsQuery,
