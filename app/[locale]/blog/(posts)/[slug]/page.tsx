@@ -34,7 +34,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const cookieStore = cookies();
-  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu";
+  const currentLang = cookieStore.get("NEXT_LOCALE")?.value || "rs";
   const post = await sanityFetch<PostQueryResponse>({
     query: postQuery,
     params,
@@ -70,7 +70,7 @@ export default async function PostPage({ params }: Props) {
   }
 
   const cookieStore = cookies();
-  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "hu";
+  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "rs";
 
   const title = currentLang == "hu" ? post.titleHU : post.titleRS;
   const content = currentLang == "hu" ? post.contentHU : post.contentRS;
