@@ -3998,3 +3998,8 @@ p {
 	margin-top: 10px !important;
 	border-radius: 8px !important;
 }
+
+.resizedimg {
+	width: auto !important;
+	height: 500px !important;
+}
