@@ -13,6 +13,7 @@ function Page() {
           <header className="major">
             <h2>{t("whoarewe")}</h2>
             <p>{t("content1")}</p>
+            <img src="./../images/Vetservis_20.jpg" alt="" className="image featured basicimage" />
             <h2></h2>
             <p>{t("content2")}</p>
             <h2></h2>
@@ -29,6 +30,7 @@ function Page() {
             <p>{t("content8")}</p>
             <h2></h2>
             <p>{t("content9")}</p>
+            <img src="./../images/Bolt_1.jpg" alt="" className="image featured basicimage" />
             <h2></h2>
             <p className="bold">{t("content10")}</p>
           </header>
