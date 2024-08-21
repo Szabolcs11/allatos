@@ -3991,3 +3991,15 @@ p {
 .bold {
 	font-weight: bold;
 }
+
+.basicimage {
+	width: 100% !important;
+	margin: 0 !important;
+	margin-top: 10px !important;
+	border-radius: 8px !important;
+}
+
+.resizedimg {
+	width: auto !important;
+	height: 500px !important;
+}

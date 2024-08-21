@@ -47,6 +47,7 @@ function Page() {
                 {t("sectionpricelistlink")}
               </a>
               .
+              <img src="./../images/kutyus.jpeg" alt="" className="image featured basicimage" />
             </section>
             <section>
               <h3>{t("section2title")}</h3>
@@ -66,6 +67,7 @@ function Page() {
                 {t("sectionpricelistlink")}
               </a>
               .
+              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage" />
             </section>
           </div>
           <div className="features-row" style={{ borderTop: "none" }}>
@@ -85,6 +87,7 @@ function Page() {
                 {t("sectionpricelistlink")}
               </a>
               .
+              <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage" />
             </section>
           </div>
         </section>
