@@ -50,13 +50,43 @@ export default defineType({
       name: "contentHU",
       title: "ContentHU",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative Text",
+              description: "Important for SEO and accessibility.",
+              validation: (rule) => rule.required(),
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: "contentRS",
       title: "ContentRS",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative Text",
+              description: "Important for SEO and accessibility.",
+              validation: (rule) => rule.required(),
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: "excerpt",
