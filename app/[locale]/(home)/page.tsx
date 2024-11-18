@@ -1,20 +1,23 @@
 import banner from "./../../images/banner.jpg";
 import pic2 from "./../../images/pic02.jpg";
 import pic3 from "./../../images/pic03.jpg";
+import kutya from "./../../images/kutyus.jpeg";
 import { useTranslations } from "next-intl";
+import { navigateTo } from "../blog/Navbar";
+import NavigatorComponent from "../blog/NavigatorComponent";
 
 const Page = () => {
   const t = useTranslations("Index");
   return (
     <>
-      <section id="banner">
+      <section id="banner" style={{ backgroundColor: "#2B7013" }}>
         <h2>Vetservis</h2>
         <p>{t("welcome")}</p>
       </section>
 
       <section id="main" className="container">
         <section className="box special">
-          <header className="major">
+          {/* <header className="major">
             <h2>
               {t("title1")}
               <br />
@@ -25,9 +28,9 @@ const Page = () => {
               <br />
               {t("subtitle2")}
             </p>
-          </header>
-          <span className="image featured">
-            <img src={banner.src} alt="" />
+          </header> */}
+          <span className="image featured" style={{ marginTop: "-3em" }}>
+            <img src={kutya.src} alt="" style={{ borderRadius: 6 }} />
           </span>
         </section>
 
@@ -35,80 +38,22 @@ const Page = () => {
           <div className="features-row">
             <section>
               <span className="icon solid major fa-bolt accent2"></span>
-              <h3>Magna etiam</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
+              <h3>{t("Service1")}</h3>
             </section>
             <section>
               <span className="icon solid major fa-chart-area accent3"></span>
-              <h3>Ipsum dolor</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
-            </section>
-          </div>
-          <div className="features-row">
-            <section>
-              <span className="icon solid major fa-cloud accent4"></span>
-              <h3>Sed feugiat</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
+              <h3>{t("Service2")}</h3>
             </section>
             <section>
-              <span className="icon solid major fa-lock accent5"></span>
-              <h3>Enim phasellus</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
+              <span className="icon solid major fa-chart-area accent4"></span>
+              <h3>{t("Service3")}</h3>
             </section>
           </div>
         </section>
 
         <div className="row">
-          <div className="col-6 col-12-narrower">
-            <section className="box special">
-              <span className="image featured">
-                <img src={pic2.src} alt="" />
-              </span>
-              <h3>Sed lorem adipiscing</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
-              <ul className="actions special">
-                <li>
-                  <a href="#" className="button alt">
-                    Learn More
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div className="col-6 col-12-narrower">
-            <section className="box special">
-              <span className="image featured">
-                <img src={pic3.src} alt="" />
-              </span>
-              <h3>Accumsan integer</h3>
-              <p>
-                Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum
-                phasellus iaculis accumsan dolore magna aliquam veroeros.
-              </p>
-              <ul className="actions special">
-                <li>
-                  <a href="#" className="button alt">
-                    Learn More
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
+          <NavigatorComponent message={t("Gallery")} path="/gallery" img={"./../images/Maci.jpg"} />
+          <NavigatorComponent message={t("Contact")} path="/contact" img={"./../images/Elvis_2.jpeg"} />
         </div>
       </section>
     </>

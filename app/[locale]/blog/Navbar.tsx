@@ -4,17 +4,25 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
+import path from "path";
 
 type NavbarType = {
   isFilldBg?: boolean;
   menus: any;
 };
 
+export let navigateTo: (path: string) => void;
+
 function Navbar({ isFilldBg, menus }: NavbarType) {
   const [locale, setLocale] = useState("rs");
   const [showDropdown, setShowDropdown] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+
+  navigateTo = (path: string) => {
+    const pathWithLocale = "/" + locale + path;
+    router.push(pathWithLocale, {});
+  };
 
   useEffect(() => {
     const storedLocale = Cookies.get("NEXT_LOCALE") || "rs";
@@ -37,7 +45,8 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
 
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
-      <h1>
+      <h1 style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <img src="./../images/favicon3.png" alt="Vetservis logo" style={{ width: 36, borderRadius: "50%" }} />
         <a>Vetservis</a>
       </h1>
       <nav id="nav">
