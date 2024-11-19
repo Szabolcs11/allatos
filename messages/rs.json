@@ -93,7 +93,8 @@
         "friday": "Petak:",
         "saturday": "Subota:",
         "sunday": "Nedelja:",
-        "closed": "Zatvoreno"
+        "closed": "Zatvoreno",
+        "address": "Adresa:"
     },
     "Menu": {
         "home": "Početna",

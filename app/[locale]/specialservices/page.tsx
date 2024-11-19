@@ -18,8 +18,10 @@ function Page() {
             <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle1")}</p>
             <h2></h2>
             <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle2")}</p>
-            <img src="./../images/Lo.jpg" alt="" className="image featured basicimage resizedimg" />
-            <img src="./../images/Friz.jpg" alt="" className="image featured basicimage resizedimg" />
+            <div className="d-center">
+              <img src="./../images/Terepi_1.jpeg" alt="" className="image featured basicimage resizedimg" />
+              <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage resizedimg" />
+            </div>
           </header>
         </section>
       </section>

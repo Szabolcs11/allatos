@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="landing is-preload">
         <Navbar menus={menus} />
         {children}
-        <Footer />
+        <Footer menus={menus} />
       </body>
     </html>
   );

@@ -11,7 +11,6 @@ import Footer from "./Footer";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 
-
 // import React, { useState, useEffect } from "react";
 // import Cookies from "js-cookie";
 // import Link from "next/link";
@@ -51,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
   const t = useTranslations("Menu");
   const te = useTranslations("Blog");
+  const t2 = useTranslations("Contact");
   const menus = [
     { title: t("home") },
     { title: t("about") },
@@ -60,6 +60,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { title: t("gallery") },
     { title: t("contact") },
     { title: t("language") },
+    { title: t2("telephone") },
+    { title: t2("phoneoncall") },
+    { title: t2("address") },
   ];
   return (
     <html>
@@ -67,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="page-wrapper">
           <Navbar menus={menus} isFilldBg={true} />
           {children}
-          <Footer />
+          <Navbar menus={menus} isFilldBg={true} />
         </div>
       </body>
     </html>

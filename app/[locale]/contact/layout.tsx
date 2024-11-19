@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("Menu");
+  const t2 = useTranslations("Contact");
   const menus = [
     { title: t("home") },
     { title: t("about") },
@@ -15,6 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { title: t("gallery") },
     { title: t("contact") },
     { title: t("language") },
+    { title: t2("telephone") },
+    { title: t2("phoneoncall") },
+    { title: t2("address") },
   ];
   return (
     <html>
@@ -22,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="page-wrapper">
           <Navbar isFilldBg={true} menus={menus} />
           {children}
-          <Footer />
+          <Footer isFilldBg={true} menus={menus} />
         </div>
       </body>
     </html>

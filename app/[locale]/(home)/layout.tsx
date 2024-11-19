@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div id="page-wrapper">
           <Navbar menus={menus} />
           {children}
-          <Footer />
+          <Footer menus={menus} />
         </div>
         {/* <nav className="flex items-center gap-8 p-4 shadow-md">
           <div className="text-lg font-bold">Statikus főoldal</div>

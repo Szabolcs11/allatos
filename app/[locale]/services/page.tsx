@@ -10,7 +10,7 @@ function Page() {
       </section>
 
       <section id="main" className="container">
-        <section className="box special">
+        {/* <section className="box special">
           <header className="major">
             <h2>{t("title")}</h2>
             <p>
@@ -19,7 +19,7 @@ function Page() {
               {t("subtitle2")}
             </p>
           </header>
-        </section>
+        </section> */}
 
         <section className="box special features">
           <div className="features-row" style={{ borderTop: "none" }}>
@@ -42,12 +42,12 @@ function Page() {
                 <li>{t("service1item10")}</li>
                 <li>{t("service1item11")}</li>
               </ul>
+              <img src="./../images/cicák.jpg" alt="" className="image featured basicimage smallerimg" />
               {t("sectionpricelist")}
               <a href="./Male Životinje Ambulanta Cenovnik.docx.pdf" target="_blank">
                 {t("sectionpricelistlink")}
               </a>
               .
-              <img src="./../images/kutyus.jpeg" alt="" className="image featured basicimage" />
             </section>
             <section>
               <h3>{t("section2title")}</h3>
@@ -62,12 +62,12 @@ function Page() {
                 <li>{t("service2item7")}</li>
                 <li>{t("service2item8")}</li>
               </ul>
+              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage smallerimg" />
               {t("sectionpricelist")}
               <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank">
                 {t("sectionpricelistlink")}
               </a>
               .
-              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage" />
             </section>
           </div>
           <div className="features-row" style={{ borderTop: "none" }}>
@@ -82,12 +82,12 @@ function Page() {
                 <li>{t("service3item5")}</li>
                 <li>{t("service3item6")}</li>
               </ul>
+              <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" />
               {t("sectionpricelist")}
               <a href="./Terenski rad Cenovnik.docx.pdf" target="_blank">
                 {t("sectionpricelistlink")}
               </a>
               .
-              <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage" />
             </section>
           </div>
         </section>

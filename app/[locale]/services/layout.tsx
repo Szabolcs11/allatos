@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("Menu");
+  const t2 = useTranslations("Contact");
   const menus = [
     { title: t("home") },
     { title: t("about") },
@@ -15,13 +16,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { title: t("gallery") },
     { title: t("contact") },
     { title: t("language") },
+    { title: t2("telephone") },
+    { title: t2("phoneoncall") },
+    { title: t2("address") },
   ];
   return (
     <html>
       <body className="landing is-preload">
         <Navbar menus={menus} />
         {children}
-        <Footer />
+        <Footer menus={menus} />
       </body>
     </html>
   );
