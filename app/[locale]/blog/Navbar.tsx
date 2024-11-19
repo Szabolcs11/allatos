@@ -46,7 +46,7 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
 
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
-      <h1 style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <h1 onClick={() => navigateTo("/")} style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
         <img src={favicon.src} alt="Vetservis logo" style={{ width: 36, borderRadius: "50%" }} />
         <a>Vetservis</a>
       </h1>
