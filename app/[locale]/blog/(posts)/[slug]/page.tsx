@@ -82,13 +82,14 @@ export default async function PostPage({ params }: Props) {
       </header>
       <div className="box">
         <span className="image featured">
-          <Image
+          {/* <Image
             width={400}
             height={190}
             alt={post.coverImage?.alt || ""}
             style={{ height: "auto" }}
             src={urlForImage(post.coverImage)?.height(1000).width(2000).url() as string}
-          />
+          /> */}
+          <img src={urlForImage(post.coverImage)?.height(1000).width(2000).url() as string} alt="" />
         </span>
         <h3>
           <PortableText value={content!} />
