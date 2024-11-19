@@ -5,12 +5,13 @@ import kutya from "./../../images/kutyus.jpeg";
 import { useTranslations } from "next-intl";
 import { navigateTo } from "../blog/Navbar";
 import NavigatorComponent from "../blog/NavigatorComponent";
+import Services from "./services";
 
 const Page = () => {
   const t = useTranslations("Index");
   return (
     <>
-      <section id="banner" style={{ backgroundColor: "#2B7013" }}>
+      <section id="banner">
         <h2>Vetservis</h2>
         <p>{t("welcome")}</p>
       </section>
@@ -35,20 +36,7 @@ const Page = () => {
         </section>
 
         <section className="box special features">
-          <div className="features-row">
-            <section>
-              <span className="icon solid major fa-bolt accent2"></span>
-              <h3>{t("Service1")}</h3>
-            </section>
-            <section>
-              <span className="icon solid major fa-chart-area accent3"></span>
-              <h3>{t("Service2")}</h3>
-            </section>
-            <section>
-              <span className="icon solid major fa-chart-area accent4"></span>
-              <h3>{t("Service3")}</h3>
-            </section>
-          </div>
+          <Services Service1={t("Service1")} Service2={t("Service2")} Service3={t("Service3")} />
         </section>
 
         <div className="row">

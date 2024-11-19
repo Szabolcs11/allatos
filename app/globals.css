@@ -4025,6 +4025,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: #2B7013;
 }
 
 .footercontainer {
@@ -4045,4 +4046,8 @@ p {
 
 .footer-ul>li>a {
 	color: #fff;
+}
+
+#banner {
+	background-color: #2B7013;
 }

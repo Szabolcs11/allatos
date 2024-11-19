@@ -10,14 +10,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const te = useTranslations("Menu");
   const t2 = useTranslations("Contact");
   const menus = [
-    { title: t("home") },
-    { title: t("about") },
-    { title: t("blog") },
-    { title: t("services") },
-    { title: t("specialservices") },
-    { title: t("gallery") },
-    { title: t("contact") },
-    { title: t("language") },
+    { title: te("home") },
+    { title: te("about") },
+    { title: te("blog") },
+    { title: te("services") },
+    { title: te("specialservices") },
+    { title: te("gallery") },
+    { title: te("contact") },
+    { title: te("language") },
     { title: t2("telephone") },
     { title: t2("phoneoncall") },
     { title: t2("address") },

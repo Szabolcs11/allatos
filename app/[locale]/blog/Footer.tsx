@@ -23,7 +23,7 @@ function Footer({ menus, isFilldBg }: FooterType) {
   }, []);
   console.log(menus);
   return (
-    <footer id="footer" style={{ backgroundColor: "#646464" }}>
+    <footer id="footer">
       <div className="footercontainer">
         <h3 style={{ margin: 0, color: "#fff" }}>Vetservis d.o.o.</h3>
       </div>

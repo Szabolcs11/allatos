@@ -23,7 +23,7 @@ function Page() {
 
         <section className="box special features">
           <div className="features-row" style={{ borderTop: "none" }}>
-            <section>
+            <section id="service1">
               <h3>{t("section1title")}</h3>
               <p>{t("section1subtitle")}</p>
               <ul>
@@ -49,7 +49,7 @@ function Page() {
               </a>
               .
             </section>
-            <section>
+            <section id="service2">
               <h3>{t("section2title")}</h3>
               <p>{t("section2subtitle")}</p>
               <ul>
@@ -69,9 +69,7 @@ function Page() {
               </a>
               .
             </section>
-          </div>
-          <div className="features-row" style={{ borderTop: "none" }}>
-            <section>
+            <section id="service3">
               <h3>{t("section3title")}</h3>
               <p>{t("section3subtitle")}</p>
               <ul>
@@ -82,7 +80,9 @@ function Page() {
                 <li>{t("service3item5")}</li>
                 <li>{t("service3item6")}</li>
               </ul>
-              <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" />
+              {/* <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" /> */}
+              <img src="./../images/Terepi_1.jpeg" alt="" className="image featured basicimage smallerimg" />
+              <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage smallerimg" />
               {t("sectionpricelist")}
               <a href="./Terenski rad Cenovnik.docx.pdf" target="_blank">
                 {t("sectionpricelistlink")}
@@ -90,6 +90,9 @@ function Page() {
               .
             </section>
           </div>
+          {/* <div className="features-row" style={{ borderTop: "none" }}>
+
+          </div> */}
         </section>
       </section>
     </>
