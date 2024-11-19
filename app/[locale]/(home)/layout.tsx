@@ -10,6 +10,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   const t = useTranslations("Menu");
+  const t2 = useTranslations("Contact");
   const menus = [
     { title: t("home") },
     { title: t("about") },
@@ -19,6 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
     { title: t("gallery") },
     { title: t("contact") },
     { title: t("language") },
+    { title: t2("telephone") },
+    { title: t2("phoneoncall") },
+    { title: t2("address") },
   ];
 
   return (
