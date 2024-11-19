@@ -68,9 +68,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html>
       <body className="landing is-preload">
         <div id="page-wrapper">
-          <Navbar menus={menus} isFilldBg={true} />
+          <Navbar menus={menus} isFilldBg={false} />
           {children}
-          <Navbar menus={menus} isFilldBg={true} />
+          <Navbar menus={menus} isFilldBg={false} />
         </div>
       </body>
     </html>

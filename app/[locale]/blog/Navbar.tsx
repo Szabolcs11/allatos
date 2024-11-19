@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
 import path from "path";
+import favicon from "./../../images/favicon.png";
 
 type NavbarType = {
   isFilldBg?: boolean;
@@ -46,7 +47,7 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
   return (
     <header id="header" className={isFilldBg ? "" : "alt"}>
       <h1 style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <img src="./../images/favicon3.png" alt="Vetservis logo" style={{ width: 36, borderRadius: "50%" }} />
+        <img src={favicon.src} alt="Vetservis logo" style={{ width: 36, borderRadius: "50%" }} />
         <a>Vetservis</a>
       </h1>
       <nav id="nav">

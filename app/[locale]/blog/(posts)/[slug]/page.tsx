@@ -89,8 +89,12 @@ export default async function PostPage({ params }: Props) {
             style={{ height: "auto" }}
             src={urlForImage(post.coverImage)?.height(1000).width(2000).url() as string}
           /> */}
-          {/* @ts-ignore */}
-          <img src={urlForImage(post.coverImage) as string} alt="" />
+          <img
+            style={{ maxHeight: 700, width: "auto", justifySelf: "center" }}
+            //@ts-ignore
+            src={urlForImage(post.coverImage).url()}
+            alt=""
+          />
         </span>
         <h3>
           <PortableText value={content!} />
