@@ -22,7 +22,7 @@ function Page() {
           </p>
         </section>
         <section className="contact-info" style={{ marginBottom: "2em" }}>
-          <span style={{ fontSize: 19 }}>Vetservis d.o.o.</span>
+          <span style={{ fontSize: 20 }}>Vetservis d.o.o.</span>
           <br />
           <span>{t("tribenumber")} 08796165</span>
           <br />
