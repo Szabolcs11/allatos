@@ -30,11 +30,11 @@ function Footer({ menus, isFilldBg }: FooterType) {
       <div className="footerline"></div>
       <div className="footercontainer">
         <p style={{ fontSize: 16, margin: 0, color: "#fff" }}>
-          <strong style={{ color: "#fff" }}>{menus[8].title}</strong><a style="border: none; color: white;" href="tel:+38124764270"> +381 24 764 270</a>
+          <strong style={{ color: "#fff" }}>{menus[8].title}</strong><a style={{border: "none", color: "#fff"}} href="tel:+38124764270"> +381 24 764 270</a>
           <br />
-          <strong style={{ color: "#fff" }}>{menus[9].title}</strong><a style="border: none; color: white;" href="tel:+381637150100"> +381 63 7 150 100</a>
+          <strong style={{ color: "#fff" }}>{menus[9].title}</strong><a style={{border: "none", color: "#fff"}} href="tel:+381637150100"> +381 63 7 150 100</a>
           <br />
-          <strong style={{ color: "#fff" }}>Email:</strong><a style="border: none; color: white;" href="mailto:vetservis@gmail.com"> vetservis@gmail.com</a>
+          <strong style={{ color: "#fff" }}>Email:</strong><a style={{border: "none", color: "#fff"}} href="mailto:vetservis@gmail.com"> vetservis@gmail.com</a>
           <br />
           <strong style={{ color: "#fff" }}>{menus[10].title}</strong> Trumbićeva 7, Bajmok 456621
         </p>
