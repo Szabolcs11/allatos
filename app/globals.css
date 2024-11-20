@@ -3507,7 +3507,6 @@
 			}
 
 			#header {
-				display: none;
 			}
 
 		/* Banner */
@@ -4059,6 +4058,39 @@ p {
 
 @media screen and (max-width: 680px) {
 	.footer-ul {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#nav {
+		position: relative;
+	}
+	
+	.menu-open {
+		display: none;
+		position: absolute;
+		right: 12px;
+		top: 4px;
+		cursor: pointer;
+		z-index: 2;
+	}
+	
+	.responsive-menu>ul {
+		display: flex;
+		flex-direction: column;
+		background-color: #2B7013;
+		width: 200px;
+		position: absolute;
+		right: -1rem;
+		top: 0;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.menu-open {
 		display: block;
 	}
 }

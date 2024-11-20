@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
 import path from "path";
 import favicon from "./../../images/favicon.png";
+import menu from "./../../images/menu.svg";
 
 type NavbarType = {
   isFilldBg?: boolean;
@@ -17,6 +18,7 @@ export let navigateTo: (path: string) => void;
 function Navbar({ isFilldBg, menus }: NavbarType) {
   const [locale, setLocale] = useState("rs");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -50,7 +52,7 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
         <img src={favicon.src} alt="Vetservis logo" style={{ width: 36, borderRadius: "50%" }} />
         <a>Vetservis</a>
       </h1>
-      <nav id="nav">
+      <nav id="nav" className={isMenuOpen ? "responsive-menu" : "hidden"}>
         <ul>
           <li>
             <Link href={"/" + locale}>{menus[0].title}</Link>
@@ -92,6 +94,7 @@ function Navbar({ isFilldBg, menus }: NavbarType) {
           </li>
         </ul>
       </nav>
+      <img src={menu.src} style={{width: 40}} className="menu-open" onClick={() => setIsMenuOpen((prev) => !prev)} />
     </header>
     // <nav className="flex items-center gap-8 p-4 shadow-md">
     //   <div className="flex gap-8">
