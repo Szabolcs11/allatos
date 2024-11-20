@@ -43,8 +43,12 @@ function Page() {
                 <li>{t("service1item11")}</li>
               </ul>
               <img src="./../images/cicák.jpg" alt="" className="image featured basicimage smallerimg" />
-              {t("sectionpricelist")}
-              <a href="./Male Životinje Ambulanta Cenovnik.docx.pdf" target="_blank">
+              <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
+              <a
+                href="./Male Životinje Ambulanta Cenovnik.docx.pdf"
+                target="_blank"
+                style={{ fontWeight: "600", color: "#A52A2A" }}
+              >
                 {t("sectionpricelistlink")}
               </a>
               .
@@ -63,8 +67,8 @@ function Page() {
                 <li>{t("service2item8")}</li>
               </ul>
               <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage smallerimg" />
-              {t("sectionpricelist")}
-              <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank">
+              <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
+              <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
                 {t("sectionpricelistlink")}
               </a>
               .
@@ -83,8 +87,12 @@ function Page() {
               {/* <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" /> */}
               <img src="./../images/Terepi_1.jpeg" alt="" className="image featured basicimage smallerimg" />
               <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage smallerimg" />
-              {t("sectionpricelist")}
-              <a href="./Terenski rad Cenovnik.docx.pdf" target="_blank">
+              <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
+              <a
+                href="./Terenski rad Cenovnik.docx.pdf"
+                target="_blank"
+                style={{ fontWeight: "600", color: "#A52A2A" }}
+              >
                 {t("sectionpricelistlink")}
               </a>
               .

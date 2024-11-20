@@ -5,7 +5,7 @@ function Page() {
   return (
     <section id="main" className="container">
       <header>
-        <h2>{t("welcome")}</h2>
+        <h2 style={{ fontSize: "3.5em" }}>{t("welcome")}</h2>
         {/* <p>Tell us what you think about our little operation.</p> */}
       </header>
       <div className="box">
