@@ -27,10 +27,7 @@ function Page() {
               <h3>{t("section1title")}</h3>
               <p>{t("section1subtitle")}</p>
               <ul>
-                <li>
-                  {t("service1item1")}
-                  <b>{t("service1item12")}</b>
-                </li>
+                <li>{t("service1item1")}</li>
                 <li>{t("service1item2")}</li>
                 <li>{t("service1item3")}</li>
                 <li>{t("service1item4")}</li>
@@ -41,6 +38,8 @@ function Page() {
                 <li>{t("service1item9")}</li>
                 <li>{t("service1item10")}</li>
                 <li>{t("service1item11")}</li>
+                <li>{t("service1item12")}</li>
+                <li>{t("service1item13")}</li>
               </ul>
               <img src="./../images/cicák.jpg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
@@ -65,10 +64,16 @@ function Page() {
                 <li>{t("service2item6")}</li>
                 <li>{t("service2item7")}</li>
                 <li>{t("service2item8")}</li>
+                <li>{t("service2item9")}</li>
               </ul>
-              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage smallerimg" />
+              <img src="./../images/terenska-sluzba.png" alt="" className="image featured basicimage smallerimg" />
+              <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
-              <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
+              <a
+                href="./Terenski rad Cenovnik.docx.pdf"
+                target="_blank"
+                style={{ fontWeight: "600", color: "#A52A2A" }}
+              >
                 {t("sectionpricelistlink")}
               </a>
               .
@@ -83,18 +88,27 @@ function Page() {
                 <li>{t("service3item4")}</li>
                 <li>{t("service3item5")}</li>
                 <li>{t("service3item6")}</li>
+                <li>{t("service3item7")}</li>
+                <li>{t("service3item8")}</li>
+                <li>{t("service3item9")}</li>
+                <li>{t("service3item10")}</li>
+                <li>{t("service3item11")}</li>
+                <li>{t("service3item12")}</li>
+                <li>{t("service3item13")}</li>
+                <li>{t("service3item14")}</li>
+                <li>{t("service3item15")}</li>
+                <li>{t("service3item16")}</li>
+                <li>{t("service3item17")}</li>
+                <li>{t("service3item18")}</li>
               </ul>
-              {/* <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" /> */}
-              <img src="./../images/Terepi_1.jpeg" alt="" className="image featured basicimage smallerimg" />
-              <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage smallerimg" />
+              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
-              <a
-                href="./Terenski rad Cenovnik.docx.pdf"
-                target="_blank"
-                style={{ fontWeight: "600", color: "#A52A2A" }}
-              >
+              <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
                 {t("sectionpricelistlink")}
               </a>
+
+              {/* <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" /> */}
+             
               .
             </section>
           </div>
