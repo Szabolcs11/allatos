@@ -4056,3 +4056,9 @@ p {
 	list-style-type: circle;
     text-align: left; 
 }
+
+@media screen and (max-width: 680px) {
+	.footer-ul {
+		display: block;
+	}
+}
