@@ -4062,18 +4062,18 @@ p {
 	}
 }
 
+.menu-open {
+	display: none;
+	position: absolute;
+	right: 12px;
+	top: 4px;
+	cursor: pointer;
+	z-index: 2;
+}
+
 @media screen and (max-width: 800px) {
 	#nav {
 		position: relative;
-	}
-	
-	.menu-open {
-		display: none;
-		position: absolute;
-		right: 12px;
-		top: 4px;
-		cursor: pointer;
-		z-index: 2;
 	}
 	
 	.responsive-menu>ul {
