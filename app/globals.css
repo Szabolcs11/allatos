@@ -4051,3 +4051,8 @@ p {
 #banner {
 	background-color: #2B7013;
 }
+
+.features-row ul { 
+	list-style-type: circle;
+    text-align: left; 
+}
