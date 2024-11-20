@@ -32,11 +32,17 @@ function BlogComponent({ converImage, title, slug, excerpt, readmore }: BlogComp
     <div className="col-6 col-12-narrower">
       <section className="box special">
         <span className="image featured">
-          <Image
+          {/* <Image
             width={400}
             height={190}
             alt={converImage?.alt || ""}
             src={urlForImage(converImage)?.height(1000).width(2000).url() as string}
+          /> */}
+          <img
+            style={{ maxHeight: 500, width: "auto", justifySelf: "center" }}
+            //@ts-ignore
+            src={urlForImage(converImage).url()}
+            alt=""
           />
         </span>
         <h3>{title}</h3>
