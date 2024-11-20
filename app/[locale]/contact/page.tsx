@@ -32,21 +32,21 @@ function Page() {
         <section className="contact-info">
           {"Email: "} <a href="mailto:vetservis@gmail.com">vetservis@gmail.com</a>
           <br />
-          {t("telephone")} <a href="tel:024764270">024 764270</a>
+          {t("telephone")} <a href="tel:+38124764270">+381 (0)24 764270</a>
           <br />
           {t("phoneoncall")}{" "}
-          <a href="tel:0647150100" style={{ backgroundColor: "red", color: "#fff" }}>
-            063 7 150 100
+          <a href="tel:+381647150100" style={{ backgroundColor: "red", color: "#fff" }}>
+            +381 (0)63 7 150 100
           </a>
           <br />
           <br />
           Facebook:{" "}
-          <a href="https://www.facebook.com/veterinarskastanica.vetservis">
+          <a target="_blank" href="https://www.facebook.com/veterinarskastanica.vetservis">
             https://www.facebook.com/veterinarskastanica.vetservis/
           </a>
           <br />
           Instagram:{" "}
-          <a href="https://www.instagram.com/veterinarskastanica.vetservis/">
+          <a target="_blank" href="https://www.instagram.com/veterinarskastanica.vetservis/">
             https://www.instagram.com/veterinarskastanica.vetservis/
           </a>
         </section>
