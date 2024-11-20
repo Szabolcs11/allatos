@@ -101,7 +101,7 @@ function Page() {
                 <li>{t("service3item17")}</li>
                 <li>{t("service3item18")}</li>
               </ul>
-              <img src="./../images/Sebészet.jpg" alt="" className="image featured basicimage smallerimg" />
+              <img src="./../images/sebeszet.png" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
               <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
                 {t("sectionpricelistlink")}
