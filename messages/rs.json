@@ -6,8 +6,8 @@
         "subtitle1": "RS Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare",
         "subtitle2": "adipiscing nunc adipiscing. Condimentum turpis massa.",
         "Service1": "Veterinarska ordinacija za kućne ljubimce",
-        "Service2": "Terenska služba za farmske životinje",
-        "Service3": "Hirurški zahvati",
+        "Service2": "Hirurški zahvati",
+        "Service3": "Hirurška intervencija",
         "Gallery": "Galerija",
         "Contact": "Kontakt",
         "Navigate": "Dalje"
@@ -93,8 +93,9 @@
     "SpecialServices": {
         "welcome": "Specijalne Usluge",
         "subwelcome": "Ponosni smo što možemo pomoći pacijentima da se izleče pomoću alternativnih rešenja!",
-        "subtitle1": "Teško izlečive slučajeve uspešno smo rešavali homeopatskim metodama u proteklih dvadeset godina.",
-        "subtitle2": "U oblasti lečenja konja možemo obezbediti odgovarajuće bokseve za kontinuirano i precizno lečenje ili veštačku oplodnju. Naši veterinari, specijalisti za reproduktivnu biologiju i lečenje konja, pružaju evropski standard usluga našim pacijentima. Veštačku oplodnju vršimo za konje sa specijalnim krvnim linijama."
+        "subtitle1": "Neke teško izlečive slučajeve, uspešno smo rešavali primenom homeopatije ili nekim drugim alternativnim metodama. Ali i u svakodnevnoj terapiji, kao dopunska ili potporna terapija, često nalazi svoju primenu. Jedno od velikih prednosti je, što nije hemija, ne ostavlja štetne posledice po organizam. Može se koristiti kod svih bolesnih stanja, kod svih vrsta i kategorija životinja. Nudi rešenje i za takve situacije, za koje moderna medicina/veterina, nije u stanju da ponudi trajno rešenje.",
+        "subtitle2": "Naravno, i ona, kao i svaka druga metoda lečenja, nije svemoguća, ali u svakom slučaju pruža dopunska rešenja.",
+        "subtitle3": "Lečenje bolesti konja, predstavlja disciplinu, sa kojom se malo veterinara hvata u koštac. Mi se prihvatamo ovog izazova. Posedujemo dva boksa za smeštaj konja, koji su ostavljeni na lečenju ili na veštačku oplodnju. Posebno se ističemo u reprodukciji konja, u praćenju ciklusa kobila, lečenju poremećaja neplodnosti. Veštačku oplodnju vršimo sa semenom, obezbeđenim od strane vlasnika kobile."
     },
     "Gallery": {
         "welcome": "Galerija slika"
