@@ -14,12 +14,14 @@ function Page() {
         <section className="box special">
           <header className="major" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <h2></h2>
-            {/* <p style="border-top: none; margin-top: 0"> */}
-            <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle1")}</p>
+            {t("subtitle1") != "SpecialServices.subtitle1" ? <> <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle1")}</p><h2></h2> </> : <></> }
+            {t("subtitle2") != "SpecialServices.subtitle2" ? <><p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle2")}</p> <h2></h2></> : <></>}
+            {t("subtitle3") != "SpecialServices.subtitle3" ? <><p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle3")}</p> <h2></h2></> : <></>}
+            {/* <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle1")}</p>
             <h2></h2>
             <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle2")}</p>
             <h2></h2>
-            <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle3")}</p>
+            <p style={{ borderTop: "none", marginTop: 0 }}>{t("subtitle3")}</p> */}
             <div className="d-center" style={{ marginTop: 24 }}>
               <img src="./../images/Lo.jpg" alt="" className="image featured basicimage resizedimg" />
               <img src="./../images/Friz.jpg" alt="" className="image featured basicimage resizedimg" />
