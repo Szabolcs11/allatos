@@ -40,6 +40,10 @@ function Page() {
                 <li>{t("service1item11")}</li>
                 <li>{t("service1item12")}</li>
                 <li>{t("service1item13")}</li>
+                <li>{t("service1item14")}</li>
+                <li>{t("service1item15")}</li>
+                <li>{t("service1item16")}</li>
+                <li>{t("service1item17")}</li>
               </ul>
               <img src="./../images/cicák.jpg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
