@@ -2363,6 +2363,9 @@
 
 				.box .image.featured:first-child img {
 					border-radius: 6px 6px 0 0;
+					max-height: 600px;
+					object-fit: cover;
+					min-height: 600px;
 				}
 
 			.box .image.featured:last-child {
