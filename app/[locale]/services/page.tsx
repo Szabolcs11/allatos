@@ -184,7 +184,7 @@ function Page() {
               <img src="./../images/cicák.jpg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
               <a
-                href="./Male Životinje Ambulanta Cenovnik.docx.pdf"
+                href="./Male_Životinje_Cenovnik.pdf"
                 target="_blank"
                 style={{ fontWeight: "600", color: "#A52A2A" }}
               >
@@ -282,7 +282,7 @@ function Page() {
               <img src="./../images/Terepi_2.jpeg" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
               <a
-                href="./Terenski rad Cenovnik.docx.pdf"
+                href="./Terenski_Cenovnik.pdf"
                 target="_blank"
                 style={{ fontWeight: "600", color: "#A52A2A" }}
               >
@@ -459,7 +459,7 @@ function Page() {
               </ul>
               <img src="./../images/sebeszet.png" alt="" className="image featured basicimage smallerimg" />
               <span style={{ fontWeight: "600" }}>{t("sectionpricelist")}</span>
-              <a href="./Hirurgija_Cenovnik.docx.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
+              <a href="./Hirurgija_Cenovnik.pdf" target="_blank" style={{ fontWeight: "600", color: "#A52A2A" }}>
                 {t("sectionpricelistlink")}
               </a>
               {/* <img src="./../images/Terepi_munka.jpg" alt="" className="image featured basicimage smallerimg" /> */}
