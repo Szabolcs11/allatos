@@ -1,136 +1,21 @@
-"use client";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import { galleriesQuery, GalleriesQueryResponse } from "@/sanity/lib/queries";
+import GalleryContent from "./galleryContent";
+import { cookies } from "next/headers";
 
-import React, { useEffect, useState } from "react";
-import Imgcomponent from "./imgcomponent";
-import CloseIcon from "./CloseIcon";
-import ArrowLeftIcon from "./ArrowLeftIcon";
-import ArrowRightIcon from "./ArrowRightIcon";
-
-const Sources = ["Kutyus1.jpeg", "kutyus.jpeg", "Lóbox.JPG", "Artur.jpeg"];
-const Animals = [
-  { src: "./../images/Artur.jpeg", name: "Artur" },
-  { src: "./../images/Benji.jpg", name: "Benji" },
-  { src: "./../images/Berni.jpeg", name: "Berni" },
-  { src: "./../images/Bulldogok.jpg", name: "Bulldogok" },
-  { src: "./../images/Csinos.jpeg", name: "Csinos" },
-  { src: "./../images/Csupafül.JPG", name: "Csupafül" },
-  { src: "./../images/Elvis.jpeg", name: "Elvis" },
-  { src: "./../images/Elvis_2.jpeg", name: "Elvis_2" },
-  { src: "./../images/Friz.jpg", name: "Fríz" },
-  { src: "./../images/Hektor.jpg", name: "Hektor" },
-  { src: "./../images/kutyus.jpeg", name: "Fürge & Bingó" },
-  { src: "./../images/Kutyus1.jpeg", name: "Rex" },
-  { src: "./../images/Lo.jpg", name: "Lexus" },
-  { src: "./../images/Lókezelés_Jade_póni_boxban.jpeg", name: "Lókezelés_Jade_póni_boxban" },
-  { src: "./../images/Lóbox.JPG", name: "Lóbox" },
-  { src: "./../images/Maci.jpg", name: "Maci" },
-  { src: "./../images/Max.jpeg", name: "Max" },
-  { src: "./../images/Max.jpg", name: "Max" },
-  { src: "./../images/Nar.jpeg", name: "Nar" },
-  { src: "./../images/Picur.jpg", name: "Picur" },
-  { src: "./../images/Pomade.jpeg", name: "Pomade" },
-  { src: "./../images/Róna_a_véradó.jpeg", name: "Róna_a_véradó" },
-  { src: "./../images/Sebészet.jpg", name: "Sebészet" },
-  { src: "./../images/Semy_Selly.jpeg", name: "Semy_Selly" },
-  { src: "./../images/Tacsi.jpg", name: "Tacsi" },
-  { src: "./../images/Tedy1.jpg", name: "Tedy1" },
-  { src: "./../images/Tedy2.jpg", name: "Tedy2" },
-  { src: "./../images/Váróterem.JPG", name: "Váróterem" },
-  { src: "./../images/Váróterem_2.JPG", name: "Váróterem_2" },
-  { src: "./../images/Érkezés.JPG", name: "Érkezés" },
-];
-
-function Page(props: any) {
-  const [fulSizedImgSrc, setFullSizedImgSrc] = useState<string | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  useEffect(() => {
-    if (fulSizedImgSrc) {
-      window.scrollTo(0, 0);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [fulSizedImgSrc]);
-
-  function handleNextImage() {
-    if (currentImageIndex < Animals.length - 1) {
-      setCurrentImageIndex(currentImageIndex + 1);
-    } else {
-      setCurrentImageIndex(0);
-    }
-  }
-
-  function handlePrevImage() {
-    if (currentImageIndex > 0) {
-      setCurrentImageIndex(currentImageIndex - 1);
-    } else {
-      setCurrentImageIndex(Animals.length - 1);
-    }
-  }
+async function Page(props: any) {
+  const cookieStore = cookies();
+  let currentLang = cookieStore.get("NEXT_LOCALE")?.value || "rs";
+  const data = await sanityFetch<GalleriesQueryResponse>({
+    query: galleriesQuery,
+    params: { skip: "0", limit: 100 },
+  });
 
   return (
     <>
-      {fulSizedImgSrc ? (
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            zIndex: 99999,
-          }}
-        >
-          <div>
-            <div
-              style={{
-                position: "absolute",
-                top: 20,
-                right: 20,
-                padding: "0.3em",
-                cursor: "pointer",
-              }}
-              onClick={() => setFullSizedImgSrc(null)}
-            >
-              <CloseIcon />
-            </div>
-            <div
-              style={{ position: "absolute", top: "50%", left: 30, cursor: "pointer", color: "white" }}
-              onClick={() => handlePrevImage()}
-            >
-              <ArrowLeftIcon />
-            </div>
-            <div
-              style={{ position: "absolute", top: "50%", right: 30, cursor: "pointer", color: "white" }}
-              onClick={() => handleNextImage()}
-            >
-              <ArrowRightIcon />
-            </div>
-          </div>
-          <section style={{ width: "35%" }}>
-            <img src={Animals[currentImageIndex].src} style={{ width: "100%", height: "100%" }} alt="" />
-          </section>
-        </div>
-      ) : (
-        <></>
-      )}
-      <section id="main" className="container">
-        <div className="row">
-          {Animals.map((animal, index) => (
-            <Imgcomponent
-              key={index}
-              // name={animal.src.split(".")[0]}
-              name={animal.name}
-              src={animal.src}
-              callback={() => setFullSizedImgSrc(animal.src)}
-            />
-          ))}
-        </div>
-      </section>
+      <div>
+        <GalleryContent data={data} lang={currentLang} />
+      </div>
     </>
   );
 }

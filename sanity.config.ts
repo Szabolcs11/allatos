@@ -15,6 +15,7 @@ import { pageStructure, singletonPlugin } from "@/sanity/plugins/settings";
 import author from "@/sanity/schemas/documents/author";
 import post from "@/sanity/schemas/documents/post";
 import settings from "@/sanity/schemas/singletons/settings";
+import gallery from "./sanity/schemas/documents/gallery";
 
 export default defineConfig({
   basePath: studioUrl,
@@ -27,6 +28,7 @@ export default defineConfig({
       // Documents
       post,
       author,
+      gallery,
     ],
   },
   plugins: [
