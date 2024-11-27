@@ -2366,6 +2366,7 @@
 					max-height: 600px;
 					object-fit: cover;
 					min-height: 600px;
+					max-width: 100%;
 				}
 
 			.box .image.featured:last-child {
