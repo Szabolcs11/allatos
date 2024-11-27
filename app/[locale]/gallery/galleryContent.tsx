@@ -87,7 +87,7 @@ function Page(props: any) {
           </div>
           <section style={{ width: "35%" }}>
             <img
-              src={urlForImage(animals[currentImageIndex].image).url()}
+              src={urlForImage(animals[currentImageIndex].image)?.url()!}
               style={{ width: "100%", height: "100%" }}
               alt=""
             />
