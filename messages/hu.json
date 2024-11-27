@@ -84,8 +84,9 @@
     "SpecialServices": {
         "welcome": "Speciális Szolgáltatásaink",
         "subwelcome": "Büszkék vagyunk hogy alternatív megoldásokkal segíthetjük pácienseink gyógyulását!",
-        "subtitle1": "Nehezen gyógyuló eseteket homeopátiás módszerrel hatékonyan oldottuk meg az elmúlt húsz év során.",
-        "subtitle2": "A lógyógyászat terén megfelelő box-ban történő elhelyezést tudunk biztosítani a folyamatos és pontos gyógyítás vagy megtermékenyítés érdekében. Szaporodás biológus és lógyógyász specialista állatorvosaink Európai szinvonalú ellátást biztosítanak pácienseinknek. Speciális vérvonalú lovaknak mesterséges megtermékenyítést végzünk."
+        "subtitle1": "Néhány, nehezen gyógyítható esetet, homeopátiás gyógymóddal oldottunk meg. Több mint másfél évtizedes tapasztalattal rendelkezünk, ezen a téren. Alapkezelésként, de a modern állatorvoslás kiegészítő kezeléseként is sikeresen alkalmazható módszer. Alkalmazásának egyik előnye, az hogy nem terheli vegyi anyagokkal a szervezetet, nincsenek mellékhatásai, nincs egészségügyi várakozási idő. Mindegyik állatfajnál alkalmazható, nagyon sok féle betegség esetén tud hozzásegíteni a gyógyuláshoz. Olyan megbetegedések esetén is használható gyógymód, ahol a mai állatorvoslás, nem tud tartós eredményt ígérni.",
+        "subtitle2": "Nem csodamódszerről van szó, de nagyon hasznos, kiegészítő megoldásokat kínáló gyógyászati rendszer.",
+        "subtitle3": "Lovak gyógyításával, manapság kevés állatorvos foglalkozik. A lógyógyászat terén is van egy bizonyos tapasztalatunk és képzettségünk. Rendelkezünk egy megfelelő vizsgáló kalodával, továbbá két, lótartásra alkalmas boxszal, ahol elhelyezést tudunk biztosítani a folyamatos és pontos gyógyítás vagy megtermékenyítés érdekében. Sokat foglalkozunk ló szaporodás biológiával, ultrahangos kanca ciklus diagnosztikával, meddőség kezelésével. Mesterséges termékenyítést is vállalunk, a lótartó gazda által hozott szaporítóanyaggal."
     },
     "Gallery": {
         "welcome": "Galéria"
