@@ -55,7 +55,7 @@
         "service1item15": "Veszettség elleni védőoltás, chipp behelyezése, kutyapasszus kiadása",
         "service1item16": "Ivartalanítás",
         "service1item17": "Sebészeti beavatkozások",
-        "service1link": "Kisállat_rendelő_Árjegyzék.pdf",
+        "service1link": "Kisállat_rendelő_Árjegyzék.pdf",
         "section2title": "HASZONÁLLAT ELLÁTÁS",
         "section2subtitle": "Haszonállatok egyéni kezelése és a teljes állomány egészségének követése, akár napi szinten.",
         "service2item1": "Egyedi kezelések",
@@ -67,7 +67,7 @@
         "service2item7": "Fémdetektoros keresés",
         "service2item8": "Vérvizsgálatok, metabolikus profilok végzése és értékelése",
         "service2item9": "Szaktanácsadás a tartást, takarmányozást, állatjólétet illetően",
-        "service2link": "Terepi_szolgálat_Árjegyzék.pdf",
+        "service2link": "Terepi_szolgálat_Árjegyzék.pdf",
         "section3title": "SEBÉSZETI BEAVATKOZÁS",
         "section3subtitle": "Kisebb, rövid ideig tartó műtéteket (pl. kandúr herélés, tályogok megnyitása, stb.) minden nap végezünk. A hosszabb idejű műtétek, előzetes bejegyzés alapján történnek. Az úgynevezett, TIVA anesztéziót alkalmazzuk, mikor is a kutyák, véna katéteren keresztül, infúziót és altató/fájdalomcsillapító gyógyszer keveréket kapnak. Ennek során a szívműködést és más paramétereket, betegfigyelő monitoron kísérjük. Az operált állatok, műtét utáni fájdalomcsillapításban és antibiotikumos kezelésben részesülnek.",
         "section3subsubtitle": "A gyakrabban végzett sebészeti beavatkozások a következőek:",
@@ -82,7 +82,7 @@
         "service3item9": "Szaktanácsadás a tartást, takarmányozást, állatjólétet illetően",
         "sectionpricelist": "Árjegyzékünkért kérjük, kattintson ",
         "sectionpricelistlink": "ide",
-        "service3link": "Sebészet_Árjegyzék.pdf"
+        "service3link": "Sebészet_Árjegyzék.pdf"
     },
     "SpecialServices": {
         "welcome": "Speciális Szolgáltatásaink",
