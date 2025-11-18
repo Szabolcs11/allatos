@@ -55,7 +55,7 @@
         "service1item15": "Veszettség elleni védőoltás, chipp behelyezése, kutyapasszus kiadása",
         "service1item16": "Ivartalanítás",
         "service1item17": "Sebészeti beavatkozások",
-        "service1link": "Kisállat_rendelő_Árjegyzék.pdf",
+        "service1link": "Árlista.pdf",
         "section2title": "HASZONÁLLAT ELLÁTÁS",
         "section2subtitle": "Haszonállatok egyéni kezelése és a teljes állomány egészségének követése, akár napi szinten.",
         "service2item1": "Egyedi kezelések",
@@ -82,7 +82,7 @@
         "service3item9": "Szaktanácsadás a tartást, takarmányozást, állatjólétet illetően",
         "sectionpricelist": "Árjegyzékünkért kérjük, kattintson ",
         "sectionpricelistlink": "ide",
-        "service3link": "Sebészet_Árjegyzék.pdf"
+        "service3link": "Árlista.pdf"
     },
     "SpecialServices": {
         "welcome": "Speciális Szolgáltatásaink",

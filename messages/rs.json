@@ -56,7 +56,7 @@
         "service1item11": "Lečenje alergija, dijagnostika alergena",
         "service1item12": "Vakcinacija štenaca i mačića protiv zaraznih bolesti",
         "service1item13": "Vakcinacija pasa i mačaka, protiv besnila, obeležavanje mikročipom i izdavanje pasoša za kućne ljubimce",
-        "service1link": "Male_Životinje_Cenovnik.pdf",
+        "service1link": "Cenovnik.pdf",
         "section2title": "TERENSKA SLUŽBA ZA FARMSKE ŽIVOTINJE",
         "section2subtitle": "Lečenje farmskih životinja i praćenje stanja čitavog zapata,  na dnevnoj bazi. ",
         "service2item1": "Vakcinacije i druge preventivne mere",
@@ -91,7 +91,7 @@
         "service3item16": "Vađenje mokraćnih kamenaca iz bešike",
         "service3item17": "Kiretaža ciste trećeg očnog kapka",
         "service3item18": "Repozicija Harderove žlezde (suzna žlezda)",
-        "service3link": "Hirurgija_Cenovnik.pdf"
+        "service3link": "Cenovnik.pdf"
     },
     "SpecialServices": {
         "welcome": "Specijalne Usluge",
